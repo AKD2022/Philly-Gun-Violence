@@ -80,21 +80,33 @@ section {
     gap: 1.5rem;
     min-height: 100vh;
     align-items: center;
-    background:url(images/peace-background.jpeg) no-repeat;
+    background:url(images/ezgif.com-gif-maker.gif) no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .home .content {
     flex:1 1 40rem;
+    padding-top: 6.5rem;
 }
-
 .home .image {
-    flex:1 1 40rem;
+    width: 450px;
+    height: auto;
+}
+.home .image img{
+    width:75%;
+    padding: 1rem;
+    animation: float 3s linear infinite;
 }
 
-.home .image img{
-    width:100%
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+
+    50%{
+        transform: translateY(3rem);
+    }
 }
 
 
