@@ -7,4 +7,4 @@ Website
 
 
 
-This is where I and Mrrkdas (https://github.com/mrrkdas) will be working on an HTML project together
+I will be working on my coding project here
