@@ -19,25 +19,25 @@ body {
     background-color: #082032;
 }
 
-.wrapper {
+.home .wrapper {
     display: flex;
 }
 
-.wrapper .static-txt{
+.home .wrapper .static-txt{
     text-align: center;
     color:#fff;
     font-size: 64px;
     font-weight: 400;
 }
 
-.wrapper .dynamic-txts {
+.home .wrapper .dynamic-txts {
     margin-left: 15px;
     line-height: 90px;
     height: 90px;
     overflow: hidden;
 }
 
-.dynamic-txts li {
+.home .dynamic-txts li {
     list-style: none;
     color: #ff4c29;
     font-size: 54px;
@@ -54,7 +54,7 @@ body {
 }
 
 
-.dynamic-txts li::after {
+.home .dynamic-txts li::after {
     content: "";
     position: absolute;
     left: 0;
@@ -98,9 +98,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #082032;
+    background:#082032;
     padding: 2rem 9%;
-    box-shadow: 0 .5rem 1rem rgba(17, 0, 255, 0.1);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 header .navbar a{
@@ -126,4 +126,97 @@ header .navbar a:hover{
 .logo {
     height: 100;
     width: auto;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    padding: 100px 15%;
+    background: #333;
+    color: #efefef;
+    display: flex;
+}
+
+.footer div {
+    text-align: center;
+}
+.col-2 {
+    flex-grow: 2;
+}
+
+.footer div h3 {
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin: 10px;
+}
+
+form input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+
+form button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.col-1, .col-2, .col-3 h3 {
+    font-size: 25px;
+}
+
+.col-3 p {
+    text-transform: lowercase;
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+#github-social {
+    margin-top: 30px;
+} #github-social i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#email-social {
+    margin-top: 30px;
+} #email-social i {
+    font-size: 25px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#instagram-social {
+    margin-top: 30px;
+} #instagram-social i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#spotify-social {
+    margin-top: 30px;
+} #spotify-social i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
 }
