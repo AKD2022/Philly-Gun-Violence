@@ -1,10 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+:root{
+    --red: #ff3838;
+}
+
 * {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; padding: 0;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #2b43a3;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+*::selection {
+    background: var(--red);
+    color: #fff;;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+header {
+    position: fixed;
+    top: 0; left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #666;
+}
+
+header .navbar a:hover{
+    color: black;
+}
+
+#menu-bar {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #666;
+    border:.1rem solid #666;
+    border-radius: .3rem;
+    padding:.5rem 1.5rem;
+    display: none;
 }
 
 .logo {
@@ -12,51 +72,147 @@
     width: auto;
 }
 
-li, a, button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-}
 
-header {
+/* Footer */
+
+.footer {
+    width: 100%;
+    padding: 100px 15%;
+    background: #333;
+    color: #efefef;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
 }
 
-.logo {
-    cursor: pointer;
+.footer div {
+    text-align: center;
+}
+.col-2 {
+    flex-grow: 2;
 }
 
-.nav_links {
-    list-style: none;
+.footer div h3 {
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin: 10px;
 }
 
-.nav_links li a {
-    transition: all 0.3s ease 0s;
-}
-
-.nav_links li a:hover{
-    color:#0088a9;
-}
-
-button {
-    padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
+form input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
     border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
 }
 
-button:hover {
-    background-color: rgba(0,136,169,0.8);
+form button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
 }
+
+.col-1, .col-2, .col-3 h3 {
+    font-size: 25px;
+}
+
+.col-3 p {
+    text-transform: lowercase;
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+#github-social {
+    margin-top: 30px;
+} #github-social i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#email-social {
+    margin-top: 30px;
+} #email-social i {
+    font-size: 25px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#instagram-social {
+    margin-top: 30px;
+} #instagram-social i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#spotify-social {
+    margin-top: 30px;
+} #spotify-social i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+/* Media Queries */
+
+@media(max-width:991px){
+
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
+
+@media(max-width:768px) {
+    #menu-bar {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #f7f7f7;
+        border-top:.1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border:.2rem solid rgba(0,0,0,.1);
+        border-left: .5rem solid var(--red);
+    }  
+}
+
+@media(max-width:400px){
+
+    html {
+        font-size: 50%;
+    }
+}   
