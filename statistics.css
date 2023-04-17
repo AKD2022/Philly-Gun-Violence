@@ -42,7 +42,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
+    background: #082032;
     padding: 2rem 9%;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
@@ -78,54 +78,82 @@ header .navbar a:hover{
     gap: 1.5rem;
     min-height: 100vh;
     align-items: center;
-    background:url(images/ezgif.com-gif-maker.gif) no-repeat;
+    background: #082032 no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.home .content {
-    flex: 1 1 40rem;
-    padding-top: 6.5rem;
-}
-.home .image {
-    width: 450px;
-    height: auto;
-}
-.home .image img{
-    width: 75%;
-    padding: 1rem;
-    animation: float3 2.5s linear;
+/* Typing Animation Starts */
+.home .wrapper {
+    display: inline-flex;
 }
 
-@keyframes float3{
-    0% {
-        display: none;
-        transform: translateY(55rem);
+.home .wrapper .static-txt{
+    text-align: center;
+    color:#fff;
+    font-size: 59.99px;
+    font-weight: 400;
+}
+
+.home .wrapper .dynamic-txts {
+    margin-left: 15px;
+    line-height: 90px;
+    height: 80px;
+    overflow: hidden;
+}
+
+
+.home .dynamic-txts li {
+    list-style: none;
+    color: #ff4c29;
+    font-size: 44px;
+    font-weight: 500;
+    top: 0;
+    position: relative;
+    animation:  slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+
+.home .dynamic-txts li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #082032;
+    animation: typing 3s steps(25) infinite;
+}
+
+
+@keyframes typing {
+    40%, 60% {
+        left: calc(100% + 30px);
     }
     100% {
-        transform: translateY(2rem);
+        left: 0;
     }
 }
 
-.home .content h3 {
-    font-size: 5rem;
-    color: #fff;
-    padding: .8rem 3rem;
-    background-color: rgb(130, 130, 130);
-    animation: float2 2s linear;
-    border-radius: 3rem;
-}
+/* Typing Animation Ends */
 
+/* Home Starts */
 .home .content p{
-    font-size: 1.7rem;
+    font-size:23px;
     color: #fff;
     padding: 1rem 0;
     padding: .8rem 3rem;
     border-radius: 3rem;
-    background-color: rgb(130, 130, 130);
+    background-color: rgb(94, 99, 118);
     animation: float2 2.5s linear;
+    margin-top: -330px;
+    text-transform: none;
 }
-
 
 .btn {
     display: inline-block;
@@ -138,20 +166,10 @@ header .navbar a:hover{
     position: relative;
     overflow: hidden;
     z-index: 0;
-    margin-top: 1rem;
-    animation: float2 3s linear;
-    margin-bottom: 10px;
+    margin-top: 150px;
+    margin-bottom: none;
 }
 
-@keyframes float2 {
-    0% {
-        display: none;
-        transform: translateY(55rem);
-    }
-    100% {
-        transform: translateY(1px);
-    }
-}
 
 .btn::before{
     content: ' ';
@@ -173,6 +191,10 @@ header .navbar a:hover{
     color: #fff;
 }
 
+/* Home Ends */
+
+/* Data Starts */
+/* Data Ends */
 
 
 

@@ -85,7 +85,6 @@ header .navbar a:hover{
 
 .home .content {
     flex: 1 1 40rem;
-    padding-top: 6.5rem;
 }
 .home .image {
     width: 450px;
