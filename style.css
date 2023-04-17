@@ -114,7 +114,7 @@ header .navbar a:hover{
     background-color: rgb(130, 130, 130);
     animation: float2 2s linear;
     border-radius: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
 }
 
 .home .content p{
@@ -141,6 +141,7 @@ header .navbar a:hover{
     z-index: 0;
     margin-top: 1rem;
     animation: float2 3s linear;
+    margin-bottom: 10px;
 }
 
 @keyframes float2 {
