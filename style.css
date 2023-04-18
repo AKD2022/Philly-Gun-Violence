@@ -97,15 +97,6 @@ header .navbar a:hover{
     animation: float3 2.5s linear;
 }
 
-@keyframes float3{
-    0% {
-        display: none;
-        transform: translateY(55rem);
-    }
-    100% {
-        transform: translateY(2rem);
-    }
-}
 
 .home .content h3 {
     font-size: 5rem;
@@ -142,16 +133,6 @@ header .navbar a:hover{
     margin-top: 1rem;
     animation: float2 3s linear;
     margin-bottom: 10px;
-}
-
-@keyframes float2 {
-    0% {
-        display: none;
-        transform: translateY(55rem);
-    }
-    100% {
-        transform: translateY(1px);
-    }
 }
 
 .btn::before{

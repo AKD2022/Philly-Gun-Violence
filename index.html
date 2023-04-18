@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/Website-logo.png">
     <script src="https://kit.fontawesome.com/53b84ad2b0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <title>Gun Violence in Philly</title>
 </head>
 <body>
@@ -30,17 +31,17 @@
 
     <section class="home" id="home">
 
-        <div class="content">
-            <h3>gun violence is everywhere</h3>
-            <p>In 2022, 514 people were shot and killed in the city of Philadelphia (CBS). That's more than one person every day.
+        <div class="content" >
+            <h3 data-aos="fade-down" data-aos-duration="3000">gun violence is everywhere</h3>
+            <p data-aos="fade-up" data-aos-duration="3000">In 2022, 514 people were shot and killed in the city of Philadelphia (CBS). That's more than one person every day.
                 There were 2273 people who were victims of shootings in total (CBS). Gun Violence is taking over. We need to find
                 a way to stop it.
             </p>
-            <a href="statistics.html" class="btn">learn more</a>
+            <a href="statistics.html" class="btn" data-aos="fade-left" data-aos-duration="3000">learn more</a>
         </div>
 
         <div class="image">
-            <img src="images/istockphoto-1204415494-612x612-r.png" id="img" alt="">
+            <img src="images/istockphoto-1204415494-612x612-r.png" id="img" alt="" data-aos="fade-right" data-aos-duration="3000">
         </div>
 
     </section>
@@ -75,6 +76,11 @@
 <!--Footer Ends-->
 
 <script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+</script>
 
 </body>
 </html>
