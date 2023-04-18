@@ -20,14 +20,13 @@
 }
 
 html {
-    font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
 }
 
 body {
-    background: #f7f7f7;
+    background: #082032;
 }
 
 section {
@@ -35,7 +34,8 @@ section {
 }
 
 header {
-    position: fixed;
+    font-size: 62.5%;
+    margin-top: none;
     top: 0; left: 0;
     right: 0;
     z-index: 1000;
@@ -48,7 +48,7 @@ header {
 }
 
 header .navbar a{
-    font-size: 2rem;
+    font-size: 1.25rem;
     margin-left: 2rem;
     color: #666;
 }
@@ -71,24 +71,90 @@ header .navbar a:hover{
     height: 100;
     width: auto;
 }
-
-.home {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    min-height: 100vh;
-    align-items: center;
-    background: #082032 no-repeat;
-    background-size: cover;
-    background-position: center;
-}
  /* Scroll Animation Reveal Starts */
 
-    
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 100px;
+    color: #fff;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 4em;
+    margin-bottom: 50px;
+}
+
+.content {
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .image {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content .image img {
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content .text-box {
+    z-index: 222;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translate(-80px, 50px);
+}
+
+.content .text-box h3 {
+    font-size:2em;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 3em;
+    margin-bottom: 80px;
+}
+
+.info-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.info {
+    width: 700px;
+    margin-left: 50px;
+}
 
 
 
- /* Scroll Animation Reveal Ends */
+/* Scroll Animation Reveal Ends */
 
 /* Footer */
 
@@ -142,17 +208,17 @@ form button {
 }
 
 .col-1, .col-2, .col-3 h3 {
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .col-3 p {
     text-transform: lowercase;
     background-color: transparent;
-    font-size: 2rem;
+    font-size: 23px;
 }
 
 #github-social {
-    margin-top: 30px;
+    margin-top: 15px;
 } #github-social i {
     font-size: 22px;
     margin: 10px;
@@ -160,23 +226,23 @@ form button {
 }
 
 #email-social {
-    margin-top: 30px;
+    margin-top: 15px;
 } #email-social i {
-    font-size: 25px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-#instagram-social {
-    margin-top: 30px;
-} #instagram-social i {
     font-size: 22px;
     margin: 10px;
     cursor: pointer;
 }
 
+#instagram-social {
+    margin-top: 15px;
+} #instagram-social i {
+    font-size: 12px;
+    margin: 5px;
+    cursor: pointer;
+}
+
 #spotify-social {
-    margin-top: 30px;
+    margin-top: 15px;
 } #spotify-social i {
     font-size: 22px;
     margin: 10px;
