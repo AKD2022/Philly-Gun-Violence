@@ -11,11 +11,11 @@ window.onscroll = () =>{
     navbar.classList.remove('active');
 }  
 
-ScrollReveal({ 
-    reset: true,
-    distance: '60px',
-    duration: 2500,
-    delay: 400
+var nav = document.querySelector('nav');
+window.addEventListener('scroll', function() {
+    if (window.pageXOffset > 100) {
+        nav.classList.add('bg-dark', 'shadow');
+    } else {
+        nav.classList.remove('bg-dark', 'shadow');
+    }
 });
-
-ScrollReveal().reveal('.main-title', { delay: 500 });
