@@ -258,6 +258,10 @@ form button {
         padding: 2rem;
     }
 
+    .footer {
+        display: none;
+    }
+
 }
 
 @media (max-width:768px) {
@@ -286,10 +290,18 @@ form button {
         border-left: .5rem solid var(--red);
         background: white; 
     }
+
+    .footer {
+        display: none;
+    }
 }
 
 @media (max-width:400px) {
     html {
         font-size: 50%;
+    }
+
+    .footer {
+        display: none;
     }
 }
