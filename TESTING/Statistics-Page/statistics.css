@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root{
+    --red: #ff3838;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+*::selection {
+    background: var(--red);
+    color: #fff;;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background: #082032;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+header {
+    font-size: 62.5%;
+    margin-top: none;
+    top: 0; left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #082032;
+    padding: 2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .navbar a{
+    font-size: 1.25rem;
+    margin-left: 2rem;
+    color: #666;
+}
+
+header .navbar a:hover{
+    color: black;
+}
+
+#menu-bar {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #666;
+    border:.1rem solid #666;
+    border-radius: .3rem;
+    padding:.5rem 1.5rem;
+    display: none;
+}
+
+.logo {
+    height: 100;
+    width: auto;
+}
+ /* Scroll Animation Reveal Starts */
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 100px;
+    color: #fff;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 4em;
+    margin-bottom: 50px;
+}
+
+.content {
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .image {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content .image img {
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content .text-box {
+    z-index: 222;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(40px);
+    padding: 40px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translate(-100px, 60px);
+    margin-left: -30px;
+}
+
+.content .text-box h3 {
+    font-size:2em;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 3em;
+    margin-bottom: 80px;
+}
+
+.info-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.info {
+    width: 700px;
+    margin-left: 50px;
+}
+
+
+
+/* Scroll Animation Reveal Ends */
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    padding: 100px 15%;
+    background: #333;
+    color: #efefef;
+    display: flex;
+}
+
+.footer div {
+    text-align: center;
+}
+.col-2 {
+    flex-grow: 2;
+}
+
+.footer div h3 {
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin: 10px;
+}
+
+form input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+
+form button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.col-1, .col-2, .col-3 h3 {
+    font-size: 23px;
+}
+
+.col-3 p {
+    text-transform: lowercase;
+    background-color: transparent;
+    font-size: 23px;
+}
+
+#github-social {
+    margin-top: 15px;
+} #github-social i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#email-social {
+    margin-top: 15px;
+} #email-social i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#instagram-social {
+    margin-top: 15px;
+} #instagram-social i {
+    font-size: 12px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#spotify-social {
+    margin-top: 15px;
+} #spotify-social i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+/* Media Queries */
