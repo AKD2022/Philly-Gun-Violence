@@ -29,6 +29,10 @@ html {
 body {
     background: white;
     overflow: hidden;
+    display: flex;
+    min-height: 100vh;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 /* Hamburger menu start */
@@ -261,97 +265,106 @@ body {
 
 /* Footer */
 
-.footer {
+footer {
     width: 100%;
-    padding: 100px 15%;
-    background: #333;
-    color: #efefef;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.footer div {
-    text-align: center;
-}
-.col-2 {
-    flex-grow: 2;
-}
-
-.footer div h3 {
-    font-weight: 300;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
-
-.col-1 a {
-    display: block;
-    text-decoration: none;
-    color: #efefef;
-    margin: 10px;
-}
-
-form input {
-    width: 400px;
-    height: 45px;
-    border-radius: 4px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    outline: none;
-    border: none;
-}
-
-form button {
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    border-radius: 30px;
-    padding: 10px 30px;
+footer .social-icon {
+    position: relative;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: 10px 0;
     font-size: 15px;
-    cursor: pointer;
+    flex-wrap: wrap;
 }
 
-.col-1, .col-2, .col-3 h3 {
-    font-size: 25px;
+footer .footer-menu{
+    position: relative;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
 }
 
-.col-3 p {
-    text-transform: lowercase;
-    background-color: transparent;
-    font-size: 2rem;
+footer .social-icon li, footer .footer-menu li {
+    list-style: none;
 }
 
-#github-social {
-    margin-top: 30px;
-} #github-social i {
-    font-size: 22px;
-    margin: 10px;
-    cursor: pointer;
+footer .social-icon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
 }
 
-#email-social {
-    margin-top: 30px;
-} #email-social i {
-    font-size: 25px;
-    margin: 10px;
-    cursor: pointer;
+footer .social-icon li a:hover {
+    transform: translateY(-10px);
 }
 
-#instagram-social {
-    margin-top: 30px;
-} #instagram-social i {
-    font-size: 22px;
-    margin: 10px;
-    cursor: pointer;
+footer .footer-menu li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
 }
 
-#spotify-social {
-    margin-top: 30px;
-} #spotify-social i {
-    font-size: 22px;
-    margin: 10px;
-    cursor: pointer;
+footer .footer-menu li a:hover {
+    opacity: 1;
 }
 
+footer p {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #ff3838 url(/Users/akdas/Desktop/Coded-by-Kids-HTML-Project/TESTING/images/wave.png);
+}
+
+
+/* Footer Ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries Start */
 
 @media (max-width:991px) {
     html {
