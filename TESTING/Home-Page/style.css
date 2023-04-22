@@ -16,7 +16,7 @@
 }
 *::selection {
     background: var(--red);
-    color: #fff;;
+    color: #fff;
 }
 
 html {
@@ -31,8 +31,7 @@ body {
     overflow: hidden;
     display: flex;
     min-height: 100vh;
-    justify-content: flex-end;
-    align-items: flex-end;
+    flex-direction: column;
 }
 
 /* Hamburger menu start */
@@ -127,7 +126,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-150%) translateY(-50%);
+    transform: translateX(-50%) translateY(-150%);
     width: 1600px;
     height: 1600px;
     background-color: black;
@@ -162,8 +161,25 @@ body {
 }
 
 .menu > div > div > ul > li > a:hover{
-    color: gray;
+    display: inline-block;
+    padding: .8rem 3rem;
+    border: .2rem solid gray; 
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 3rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    background: gray;
+    transition: .1s linear;
 }
+
+
+
 
 .toggler:checked ~ .menu{
 	visibility: visible;
@@ -179,13 +195,161 @@ body {
 
 /* Hamburger Menu End */
 
+/* Fade-in start */
+
+/* h2-fade start */
+#h2-fade {
+    -webkit-animation:  h2-fade 2s both;
+    -moz-animation:  h2-fade 2s both;
+    -o-animation:  h2-fade 2s both;
+    animation:  h2-fade 2s both;
+}
+@-webkit-keyframes h2-fade {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(-50px);
+        -webkit-transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -webkit-transform: translateY(0);
+    }
+}
+@-moz-keyframes h2-fade {
+    0%{
+        opacity: 0;
+        -moz-transform: translateX(-50px);
+        -moz-transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+        -moz-transform: translateY(0);
+    }
+}
+@-o-keyframes h2-fade {
+    0% {
+        opacity: 0;
+        -o-transform: translateX(-50px);
+        -o-transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        -o-transform: translateX(0);
+        -o-transform: translateY(0);
+    }
+}
+@keyframes h2-fade {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+}
+/* h2-fade end */
+
+/* p-fade start */
+#p-fade {
+    -webkit-animation:  h2-fade 2.5s both;
+    -moz-animation:  h2-fade 3s both;
+    -o-animation:  h2-fade 3s both;
+    animation:  p-fade 3s both;
+}
+@-webkit-keyframes p-fade {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes p-fade {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes p-fade {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes p-fade {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* p-fade end */
+
+/* btn-fade start */
+#btn-fade {
+    -webkit-animation:  h2-fade 3.5s both;
+    -moz-animation:  h2-fade 3.5s both;
+    -o-animation:  h2-fade 3.5s both;
+    animation:  btn-fade 3.5s both;
+}
+
+@-webkit-keyframes btn-fade {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes btn-fade {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes btn-fade {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes btn-fade {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* btn-fade end */
+
+
+
+/* Fade-in end*/
+
 /* Home Page Start */
 
 .container{
 	position: relative;
 	height: 100vh;
 	width: 100vw;
-	background: url("/Users/akdas/Desktop/Coded-by-Kids-HTML-Project/TESTING/images/ezgif.com-gif-maker.gif") no-repeat;
+	background: 
+    url("/Users/akdas/Desktop/Coded-by-Kids-HTML-Project/TESTING/images/ezgif.com-gif-maker.gif") no-repeat;
 	background-size: cover;
 	background-position: 50% 36%;
 	display: flex;
@@ -263,101 +427,6 @@ body {
 
 /* Home Page End */
 
-/* Footer */
-
-footer {
-    width: 100%;
-    background: #3586ff;
-    min-height: 100px;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-footer .social-icon {
-    position: relative;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    margin: 10px 0;
-    font-size: 15px;
-    flex-wrap: wrap;
-}
-
-footer .footer-menu{
-    position: relative;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap;
-}
-
-footer .social-icon li, footer .footer-menu li {
-    list-style: none;
-}
-
-footer .social-icon li a {
-    font-size: 2em;
-    color: #fff;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
-}
-
-footer .social-icon li a:hover {
-    transform: translateY(-10px);
-}
-
-footer .footer-menu li a {
-    font-size: 2em;
-    color: #fff;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
-    text-decoration: none;
-    opacity: 0.75;
-}
-
-footer .footer-menu li a:hover {
-    opacity: 1;
-}
-
-footer p {
-    color: white;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
-
-footer .wave {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background-color: #ff3838 url(/Users/akdas/Desktop/Coded-by-Kids-HTML-Project/TESTING/images/wave.png);
-}
-
-
-/* Footer Ends */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -365,60 +434,3 @@ footer .wave {
 
 
 /* Media Queries Start */
-
-@media (max-width:991px) {
-    html {
-        font-size: 55%;
-    }
-
-    header {
-        padding: 2rem;
-    }
-
-    .footer {
-        display: none;
-    }
-
-}
-
-@media (max-width:768px) {
-    #menu-bar {
-        display: initial;
-    }
-
-    header .navbar {
-        position: absolute;
-        top: 100%; left: 0; right: 0;
-        background: white;
-        border-top: .1rem solid rgba(0,0,0,.1);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-
-    header .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        transition: ease-in-out; 
-    }
-
-    header .navbar a {
-        margin: 1.5rem;
-        padding: 1.5rem;
-        display: block;
-        border: .2rem solid rgba(0,0,0,.1);
-        border-left: .5rem solid var(--red);
-        background: white; 
-    }
-
-    .footer {
-        display: none;
-    }
-}
-
-@media (max-width:400px) {
-    html {
-        font-size: 50%;
-    }
-
-    .footer {
-        display: none;
-    }
-}
