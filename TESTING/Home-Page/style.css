@@ -178,9 +178,6 @@ body {
     transition: .1s linear;
 }
 
-
-
-
 .toggler:checked ~ .menu{
 	visibility: visible;
 }
