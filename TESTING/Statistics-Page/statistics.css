@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-:root{
-    --red: #ff3838;
-}
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -15,7 +12,6 @@
     transition: all .2s linear;
 }
 *::selection {
-    background: var(--red);
     color: black;
 }
 
@@ -26,7 +22,7 @@ html {
 }
 
 body {
-    background: none;
+    background: #243c74;
     overflow: hidden;
     display: flex;
     min-height: 100vh;
@@ -194,9 +190,248 @@ body {
 
 /* Home Page Starts */
 
+.home-container{
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background: 
+    url("/Users/akdas/Desktop/Coded-by-Kids-HTML-Project/TESTING/images/ezgif.com-gif-maker.gif") no-repeat;
+	background-size: cover;
+	background-position: 50% 36%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
 
+.home-container:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.home-content{
+	position: relative;
+    max-width: 700px;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.home-content h2{
+	color: white;
+	font-family: "Dancing Script", cursive;
+	font-size: 100px;
+	margin-bottom: 0.8rem;
+}
+
+.home-content p{
+	color: white;
+	font-size: 35px;
+	font-weight: 100;
+    margin-bottom: 0.75rem;
+}
+
+.home-container a {
+    display: inline-block;
+    padding: .8rem 3rem;
+    border: .2rem solid gray;
+    color: gray;
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+}
+
+.home-container a::before{
+    content: ' ';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0%;
+    height: 100%;
+    background: gray;
+    transition: .3s linear;
+    z-index: -1;
+}
+
+.home-container a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.home-container a:hover{
+    color: #fff;
+}
 
 /* Home Page Ends */
+
+/* Information Page Starts */
+
+.section1, .section2, .section3, .section4 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 100px;
+    color: white;
+}
+
+.section1:before, .section2:before, .section3:before, .section4:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.section1 {
+    background: url(../images/statistics-background1.jpeg);
+    background-size: cover;
+	background-position: 50% 36%;
+}
+
+.section2 {
+    background: url(../images/statisics-background2.jpeg);
+    background-size: cover;
+	background-position: 50% 36%;
+}
+
+.section3 {
+    background: url(../images/statistics-background3.jpeg);
+    background-size: cover;
+	background-position: 50% 36%;
+}
+
+.section4 {
+    background: url(../images/statistics-background4.jpeg);
+    background-size: cover;
+	background-position: 50% 36%;
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 4em;
+    margin-bottom: 50px;
+}
+
+.content {
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .image {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content .text-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(40px);
+    padding: 40px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translate(-100px, 60px);
+    margin-left: 50px;
+}
+
+.content .text-box h3 {
+    font-size:2em;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    margin-top: 15px;
+    font-size: 3em;
+    margin-bottom: 80px;
+}
+
+.info-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.info {
+    width: 700px;
+    margin-left: 50px;
+}
+
+.section-title{
+    opacity: 0;
+    transition: all 3s ;
+}
+
+.show1 {
+    opacity: 1;
+}
+
+.image {
+    opacity: 0;
+    transition: all 3.5s;
+}
+
+.show2 {
+    opacity: 1;
+}
+
+.text-box {
+    opacity: 0;
+    transition: all 4s;
+}
+
+.show3 {
+    opacity: 1;
+}
+
+.show1, .show2, .show3 {
+    animation: blur 2s;
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(20px);
+    }
+    50% {
+        filter: blur(10px);
+    }
+    100% {
+        filter: blur(0px);
+    }
+}
+
+/* Information Page Ends */
 
 
 
