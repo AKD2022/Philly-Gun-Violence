@@ -20,6 +20,7 @@ slider.querySelector(".controls .down").addEventListener("click", function() {
     slider.querySelector(".wrapper .left div").style.marginTop = `${currentSlide*-100}vh`;
     slider.querySelector(".wrapper .right div").style.marginTop = `${(totalSlides - currentSlide)*-100}vh`;
 });
+
 /* Sliding Animation Ends */
 
 /* Titles */
@@ -47,5 +48,3 @@ const observer2 = new IntersectionObserver((entries2) => {
 
 const hiddenElements2 = document.querySelectorAll('.text');
 hiddenElements2.forEach((el) => observer2.observe(el));
-
-
