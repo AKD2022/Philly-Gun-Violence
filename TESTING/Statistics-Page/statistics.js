@@ -48,3 +48,19 @@ const observer2 = new IntersectionObserver((entries2) => {
 
 const hiddenElements2 = document.querySelectorAll('.text');
 hiddenElements2.forEach((el) => observer2.observe(el));
+
+/* h6 */
+const observer3 = new IntersectionObserver((entries3) => {
+    entries3.forEach((entry3) => {
+        console.log(entry3)
+        if (entry3.isIntersecting) {
+            entry3.target.classList.add('show2');
+        }
+    });
+});
+
+const hiddenElements3 = document.querySelectorAll('h6');
+hiddenElements3.forEach((el) => observer3.observe(el));
+
+
+

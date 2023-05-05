@@ -28,6 +28,7 @@ body {
     padding: 0;
     background: black;
     animation: transitionIn 2s;
+    flex-direction: column;
 }
 
 /* Hamburger menu start */
@@ -384,9 +385,17 @@ body {
     }
 }
 
+h6 {
+    position: relative;
+    transform: translate(5.86%, 300%);
+}
+
 
 
 /* Information Page Ends */
+
+
+
 
 
 
