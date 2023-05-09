@@ -282,7 +282,7 @@ body {
     border-radius: 30px;
     transform: translate(-100px, 30px);
     margin-left: 103px;
-    display: flex;
+    position: absolute;
 }
 
 .show2 {
@@ -367,7 +367,7 @@ body {
     padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
-    transform: translate(-100px, 5px);
+    transform: translate(-100px, -200px);
     margin-left: 103px;
     color: white;
 }
@@ -472,6 +472,23 @@ body {
 
 
 /* Media Queries Start */
+
+@media (max-width:1221px) {
+    .slider .controls {
+        transform: translate(35.01em, 430px);
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .intro-sec2 {
+        text-align: left;
+        align-items: left;
+        justify-content: left;
+        transform: translateX(-200px);
+    }
+}
 @media (max-width:1120px) {
     .intro-sec2 {
         transform: translateX(-200px);
@@ -479,9 +496,71 @@ body {
 
     .slider .wrapper .right {
         display: none;
+        overflow: hidden;
     }
 
-    .slider .wrapper{
-           
+    .slider .wrapper .left{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .slider .controls {
+        transform: translate(60em, 430px);
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .slider .controls > .up {
+        transform: translateY(50px);
+        top: 0px;
+        bottom: 0px;
+        background: #fff;
+        color: #111;
+    }
+}
+
+@media (max-width:1024px) {
+    .slider .controls {
+        transform: translate(50em, 430px);
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 800px) {
+    .slider .controls {
+        transform: translate(40em, 430px);
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width:579px) {
+    .first h6 {
+        transform: translate(33px, 120px);
+    }
+
+    .intro-sec2 {
+        margin-left: none;
+        margin-right: 30px;
+        padding: 20px;
+    }
+
+    .intro-sec {
+        padding: 20px;
+    }
+
+    .slider .controls {
+        transform: translate(400px, 200px);
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
     }
 }
