@@ -180,15 +180,14 @@ body {
 
 /* Information Page Starts */
 .slider {
-    width: 100%;
-    height: 100vh;
+   width: 100%;
+   height: 100vh;
 }
 
 .slider .controls {
-    position: absolute;
+    transform: translate(698.5px, 400px);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
 }
@@ -254,9 +253,9 @@ body {
 }
 
 .slider .wrapper .right > div img{
-    object-fit: cover;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .slider .wrapper .right div:nth-child(1) {
@@ -265,7 +264,7 @@ body {
 
 .section-title{
     opacity: 0;
-    transition: all 3s ;
+    transition: all 3s;
 }
 
 .show1 {
@@ -281,7 +280,7 @@ body {
     font-size: 40px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
-    transform: translate(-100px, 60px);
+    transform: translate(-100px, 30px);
     margin-left: 103px;
     display: flex;
 }
@@ -368,7 +367,7 @@ body {
     padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
-    transform: translate(-100px, 60px);
+    transform: translate(-100px, 5px);
     margin-left: 103px;
     color: white;
 }
@@ -385,20 +384,104 @@ body {
     }
 }
 
-h6 {
+.information h6 {
     position: relative;
     transform: translate(5.86%, 300%);
 }
 
-
+.information {
+    object-fit: cover;
+}
 
 /* Information Page Ends */
 
+.intro {
+    height: 100vh;
+}
+  
+.intro video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+  
+.intro-sec h1 {
+    top: 50%;
+    left: 50%;
+    font-size: 80px;
+    color: white;
+}
+  
+.intro-sec, .intro-sec2 {
+    height: 100vh;
+    color: black;
+}
+  
+.intro-sec h1 {
+    padding-top: 300px;
+    text-align: center;
+    font-size: 80px;
+    color: white;
+}
 
+.intro-sec2 h2 {
+    color: white;
+    transform: translate(250px, 300px);
+}
 
+.intro-sec2 h4 {
+    color: white;
+    transform: translate(250px, 400px);
+}
 
+.intro-sec h2 {
+    color: white;
+    margin-left: 30em;
+}
 
+/* Intro Ends */
 
+/* To WherePage Starts */
+
+.towhere video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: #111;
+    height: none;
+}
+.towhere .video-wrapper {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 750px;
+}
+.towhere .header{
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+/* To WherePage Ends */
 
 
 /* Media Queries Start */
+@media (max-width:1120px) {
+    .intro-sec2 {
+        transform: translateX(-200px);
+    }
+
+    .slider .wrapper .right {
+        display: none;
+    }
+
+    .slider .wrapper{
+           
+    }
+}
