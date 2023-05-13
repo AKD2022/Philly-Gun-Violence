@@ -346,7 +346,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	background: 
-    url("/Users/akdas/Desktop/Coded-by-Kids-HTML-Project/TESTING/images/ezgif.com-gif-maker.gif") no-repeat;
+    url("../images/ezgif.com-gif-maker.gif") no-repeat;
 	background-size: cover;
 	background-position: 50% 36%;
 	display: flex;
