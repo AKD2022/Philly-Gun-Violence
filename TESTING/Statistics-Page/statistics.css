@@ -277,7 +277,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(50px);
     padding: 30px;
-    font-size: 40px;
+    font-size: 30px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     transform: translate(2px, 10px);
@@ -385,7 +385,7 @@ body {
 
 .information h6 {
     position: relative;
-    transform: translate(44px, -10px);
+    transform: translate(43px, -10px);
 }
 
 .information {
@@ -429,15 +429,11 @@ body {
     align-items: left;
     justify-content: left;
 }
-
-.intro-sec2 h4 {
-    color: white;
-    transform: translate(250px, 400px);
-}
-
 .intro-sec h2 {
     color: white;
-    margin-left: 30em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .intro-sec2 {
@@ -449,7 +445,8 @@ body {
 
 .intro-sec2 h2 {
     margin-left: 10em;
-    margin-top: 10em;
+    margin-top: 5em;
+    margin-bottom: -20em;
 }
 
 .intro-sec2 h4 {
@@ -485,34 +482,46 @@ body {
     position: relative;
     color: white;
     text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+    padding: 10px;
 }
 /* To WherePage Ends */
 
 
 /* Media Queries Start */
 
-@media (min-width:1120px) and (max-width:1221px) {
+@media (max-width:1440px) {
+    html {
+        font-size: 125%;
+    }
+    
+    .intro-sec2 h2 {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-right: 8em;
+        padding-top: 20px;
+    }
+
     .slider .controls {
-        transform: translate(35em, 430px);
-        top: 50%;
-        left: 50%;
-        width: 100px;
-        height: 100px;
+        transform: translate(33.5em, 25em);
     }
-
-    .intro-sec2 {
-        text-align: left;
-        align-items: left;
-        justify-content: left;
-        transform: translateX(-200px);
-    }
-
 }
-@media (max-width:1120px) {
-    .intro-sec2 {
-        transform: translateX(-200px);
+
+@media (max-width: 1024px) {
+    .slider .controls {
+        transform: translate(23.1em, 20em);
     }
 
+    .text, .section-title {
+        margin-bottom: 30px;
+    }
+
+    .information h6 {
+        transform: translate(43px, -40px);
+    }
+}
+
+@media (max-width: 768px) {
     .slider .wrapper .right {
         display: none;
         overflow: hidden;
@@ -524,126 +533,38 @@ body {
     }
 
     .slider .controls {
-        transform: translate(30em, 600px);
-        top: 50%;
-        left: 50%;
-        width: 100px;
-        height: 100px;
+        transform: translate(16em, 32em);
     }
 
     .slider .controls > .up {
         transform: translateY(50px);
-        top: 0px;
-        bottom: 0px;
-        background: #fff;
-        color: #111;
     }
 }
 
-@media (max-width:1024px) {
-    .slider .controls {
-        transform: translate(28em, 600px);
-        top: 50%;
-        left: 50%;
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media (max-width: 800px) {
-    .slider .controls {
-        transform: translate(20em, 600px);
-        top: 50%;
-        left: 50%;
-        width: 100px;
-        height: 100px;
-    }
-    .section-title, .text {
-        transform: translateY(-30px);
-    }
-
-    .intro-sec2 {
-        margin-left: none;
-        margin-right: 30px;
-        padding: 30px;
-    }
-
-    .information h6 {
-        transform: translate(43px, -50px);
-    }
-
-    .intro-sec h2 {
-        transform: translate(-375px, 20px);   
-    }
-    
-    .intro-sec {
-        padding: 20px;
-    }
-
-    
-}
-
-@media (max-width:579px) {
-    .information h6 {
-        transform: translate(14px, 10px);
-    }
-
-    .intro-sec2 {
-        margin-left: none;
-        margin-right: 30px;
-        padding: 20px;
-    }
-
-    .intro-sec {
-        padding: 20px;
+@media (max-width: 425px) {
+    .text, .section-title {
+        font-size: 20px;
         margin-bottom: 100px;
+        padding: 20px;
     }
-
+    
     .slider .controls {
-        transform: translate(13em, 600px);
-        top: 50%;
-        left: 50%;
-        width: 100px;
-        height: 100px;
+        transform: translate(17em, 20em);
     }
 
-    .section-title, .text {
-        transform: translateY(-70px);
+    .slider .controls > .up {
+        transform: translate(-50px, -1px);
     }
 
-    .intro-sec h2 {
-        transform: translate(-475px, 20px);   
+    .intro-sec2 h2{
+        font-size: 25px;
+        margin-right: 25px;
+        transform: translateX(-100px);
     }
 }
 
-@media (min-width:480px) and (max-width:500px) {
-
-    .intro-sec2 {
-        margin-left: 30px;
-        padding: 20px;
-    }
-    .intro-sec2 h4 {
-        padding: 2rem;
-    }
-
-
-    .slider .controls {
-        transform: translate(4em, 650px);
-        top: 50%;
-        left: 50%;
-        width: 100px;
-        height: 100px;
-    }
-
-    .section-title, .text {
-        transform: translateY(-70px);
-    }
-
-    .intro-sec h2 {
-        transform: translate(-515px, 20px);   
-    }
-    
-    .information h6 {
-        transform: translate(40px ,-9em);
+@media (max-width: 375px) {
+    .section-tite {
+        
     }
 }
