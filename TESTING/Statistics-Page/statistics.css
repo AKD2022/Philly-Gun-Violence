@@ -441,9 +441,20 @@ body {
 }
 
 .intro-sec2 {
-   justify-content: left;
-   align-items: left;
-   text-align: left;
+    margin-top: 20em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-sec2 h2 {
+    margin-left: 10em;
+    margin-top: 10em;
+}
+
+.intro-sec2 h4 {
+    margin-top: -20em;
+    margin-left: -35em;
 }
 
 /* Intro Ends */
@@ -605,19 +616,16 @@ body {
     }
 }
 
-@media (max-width:480px) {
-    .first h6 {
-        transform: translate(14px, 120px);
-    }
+@media (min-width:480px) and (max-width:500px) {
 
     .intro-sec2 {
-        margin-left: 20px;
+        margin-left: 30px;
         padding: 20px;
+    }
+    .intro-sec2 h4 {
+        padding: 2rem;
     }
 
-    .intro-sec {
-        padding: 20px;
-    }
 
     .slider .controls {
         transform: translate(4em, 650px);
@@ -633,5 +641,9 @@ body {
 
     .intro-sec h2 {
         transform: translate(-515px, 20px);   
+    }
+    
+    .information h6 {
+        transform: translate(40px ,-9em);
     }
 }
