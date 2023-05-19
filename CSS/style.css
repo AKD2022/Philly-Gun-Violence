@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-:root{
-    --red: #ff3838;
-}
-
 * {
     font-family: 'Montserrat', sans-serif;
     margin: 0; padding: 0;
@@ -11,26 +7,27 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: all .2s linear;
 }
+
 *::selection {
-    background: var(--red);
-    color: #fff;
+    color: black;
 }
 
 html {
-    font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
 }
 
 body {
-    background: white;
     overflow: hidden;
     display: flex;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: black;
+    animation: transitionIn 2s;
     flex-direction: column;
 }
 
@@ -192,213 +189,96 @@ body {
 
 /* Hamburger Menu End */
 
-/* Fade-in start */
+/* Home Page Starts */
+.container {
+    position: absolute;
+    background-image: url(../images/statistics-home-1.jpeg), url(../images/statistics-home-2.jpeg), url(../images/Home-1.jpeg), url(../images/statistics-home-4.jpeg), url(../images/Home-2.jpeg);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: animate 30s ease-in-out infinite;
+    background-size: cover;
+}
 
-/* h2-fade start */
-#h2-fade {
-    -webkit-animation:  h2-fade 2s both;
-    -moz-animation:  h2-fade 2s both;
-    -o-animation:  h2-fade 2s both;
-    animation:  h2-fade 2s both;
-}
-@-webkit-keyframes h2-fade {
-    0%{
-        opacity: 0;
-        -webkit-transform: translateX(-50px);
-        -webkit-transform: translateY(100px);
+@keyframes animate {
+    0%, 100% {
+        background-image: url(../images/statistics-home-1.jpeg);
     }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateX(0);
-        -webkit-transform: translateY(0);
+    20% {
+        background-image: url(../images/statistics-home-2.jpeg);
+    }
+    40%{
+        background-image: url(../images/Home-1.jpeg);
+    }
+    60% {
+        background-image: url(../images/statistics-home-4.jpeg);
+    }
+    80% {
+        background-image: url(../images/Home-2.jpeg);
     }
 }
-@-moz-keyframes h2-fade {
-    0%{
-        opacity: 0;
-        -moz-transform: translateX(-50px);
-        -moz-transform: translateY(100px);
-    }
-    100% {
-        opacity: 1;
-        -moz-transform: translateX(0);
-        -moz-transform: translateY(0);
-    }
+
+.outer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
 }
-@-o-keyframes h2-fade {
+
+.details {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.details p {
+    animation: fade-in-after ease-in 4s;
+}
+
+.details h1 {
+    font-size: 3em;
+    color: white;
+    animation: fade-in ease-in 3s;
+}
+
+@keyframes fade-in {
     0% {
         opacity: 0;
-        -o-transform: translateX(-50px);
-        -o-transform: translateY(100px);
     }
     100% {
         opacity: 1;
-        -o-transform: translateX(0);
-        -o-transform: translateY(0);
     }
 }
-@keyframes h2-fade {
-    0%{
-        opacity: 0;
-        transform: translateX(-50px);
-        transform: translateY(100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-        transform: translateY(0);
-    }
-}
-/* h2-fade end */
 
-/* p-fade start */
-#p-fade {
-    -webkit-animation:  h2-fade 2.5s both;
-    -moz-animation:  h2-fade 3s both;
-    -o-animation:  h2-fade 3s both;
-    animation:  p-fade 3s both;
-}
-@-webkit-keyframes p-fade {
-    0%{
+@keyframes fade-in-after{
+    0%, 25%, 35% {
         opacity: 0;
     }
     100% {
         opacity: 1;
     }
-}
-@-moz-keyframes p-fade {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@-o-keyframes p-fade {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes p-fade {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-/* p-fade end */
-
-/* btn-fade start */
-#btn-fade {
-    -webkit-animation:  h2-fade 3.5s both;
-    -moz-animation:  h2-fade 3.5s both;
-    -o-animation:  h2-fade 3.5s both;
-    animation:  btn-fade 3.5s both;
-}
-
-@-webkit-keyframes btn-fade {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@-moz-keyframes btn-fade {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@-o-keyframes btn-fade {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes btn-fade {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* btn-fade end */
-
-
-
-/* Fade-in end*/
-
-/* Home Page Start */
-
-.container{
-	position: relative;
-	height: 100vh;
-	width: 100vw;
-	background: 
-    url("../images/ezgif.com-gif-maker.gif") no-repeat;
-    background-size: cover;
-	background-position: center;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-
-.container:before{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.7);
-}
-
-.content{
-	position: relative;
-    max-width: 700px;
-    padding: 2rem;
-    z-index: 1;
-    transform: translate(8em, 3em);
-}
-
-.content h2{
-	color: white;
-	font-family: "Dancing Script", cursive;
-	font-size: 100px;
-	margin-bottom: 0.8rem;
-}
-
-.content p{
-	color: white;
-	font-size: 35px;
-	font-weight: 100;
-    margin-bottom: 0.75rem;
 }
 
 .btn {
     display: inline-block;
-    padding: .8rem 3rem;
-    border: .2rem solid gray;
+    padding: 10px;
+    border: 2px solid gray;
     color: gray;
     cursor: pointer;
-    font-size: 1.7rem;
-    border-radius: 3rem;
+    font-size: 15px;
+    border-radius: 40px;
     position: relative;
     overflow: hidden;
     z-index: 0;
     margin-top: 1rem;
     margin-bottom: 10px;
+    animation: fade-in-after-p 6s ease-in;
 }
 
 .btn::before{
@@ -421,29 +301,34 @@ body {
     color: #fff;
 }
 
-/* Home Page End */
-
-
-
-
+@keyframes fade-in-after-p {
+    0%, 35%{
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
+}
 
 
 
 /* Media Queries Start */
-@media (max-width:1440px) {
-    html {
-        font-size: 125%;
-    }
-}
 
-@media (max-width:1024px) {
-    html {
-        font-size: 120%;
+@media (max-width:425px) {
+    .details h1 {
+        font-size: 2em;
     }
-}
 
-@media (max-width:768px) {
-    .menu-wrap {
-        font-size: 120%;
+    .details p {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .details .btn {
+        size: 75%;
+    }
+
+    .container {
+        background-position: center;
     }
 }

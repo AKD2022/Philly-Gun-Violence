@@ -8,8 +8,8 @@
     outline: none;
     border: none;
     text-decoration: none;
-    transition: all .2s linear;
 }
+
 *::selection {
     color: black;
 }
@@ -147,21 +147,24 @@ body {
 
 .menu > div > div > ul > li > a{
 	text-decoration: none;
-	color: #fff;
+	color: black;
 	font-weight: 550;
 	text-transform: uppercase;
 	margin: .75rem;
 	transition: .3s;
 	font-size: 30px;
 	display: inline-block;
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .menu > div > div > ul > li > a:hover{
-    border: solid 0.1em gray;
-    padding: 0.8rem 2rem ;
+    padding: 1px;
     border-radius: 0.2em;
     background-color: black;
     color: white;
+    letter-spacing: 2px;
 }
 
 .toggler:checked ~ .menu{
@@ -444,15 +447,11 @@ body {
 }
 
 .intro-sec2 h2 {
-    margin-left: 10em;
-    margin-top: 5em;
-    margin-bottom: -20em;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
-.intro-sec2 h4 {
-    margin-top: -20em;
-    margin-left: -35em;
-}
 
 /* Intro Ends */
 
@@ -505,6 +504,10 @@ body {
     .slider .controls {
         transform: translate(33.5em, 25em);
     }
+
+    .intro-sec2 {
+        margin-left: 9em;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -518,6 +521,10 @@ body {
 
     .information h6 {
         transform: translate(43px, -40px);
+    }
+
+    .intro-sec2 {
+        margin-left: 9em;
     }
 }
 
@@ -539,13 +546,18 @@ body {
     .slider .controls > .up {
         transform: translateY(50px);
     }
+
+    .intro-sec2 h2 {
+        margin-left: 9em;
+        padding: 10px;
+    }
 }
 
 @media (max-width: 425px) {
     .text, .section-title {
         font-size: 20px;
         margin-bottom: 100px;
-        padding: 20px;
+        padding: 24px;
     }
     
     .slider .controls {
@@ -557,11 +569,67 @@ body {
     }
 
     .intro-sec2 h2{
-        font-size: 25px;
-        margin-right: 25px;
-        transform: translateX(-100px);
+        transform: translateX(-6em);
+    }
+
+    .information h6 {
+        transform: translate(38px, -108px);
+        font-size: 10px;
+    }
+
+    .intro-sec2 h2 {
+        margin-left: 9em;
     }
 }
 
 @media (max-width: 375px) {
+    .wrapper .left .first .section-title, 
+    .wrapper .left .second .section-title, 
+    .wrapper .left .third .section-title, 
+    .wrapper .left .fourth .section-title, 
+    .wrapper .left .fifth .section-title {
+        font-size: 2em;
+    }
+
+    .wrapper .left .first .text,
+    .wrapper .left .second .text, 
+    .wrapper .left .third .text,
+    .wrapper .left .fourth .text,
+    .wrapper .left .fifth .text {
+        font-size: 75%;
+    }
+
+    .slider .controls {
+        transform: translate(15em, 20em);
+    } 
+}
+
+@media (max-width:320px) {
+    .intro-sec2 h2{
+        transform: translateX(-7em);
+    }
+
+    .wrapper .left .first .section-title, 
+    .wrapper .left .second .section-title, 
+    .wrapper .left .third .section-title, 
+    .wrapper .left .fourth .section-title, 
+    .wrapper .left .fifth .section-title {
+        font-size: 1.25em;
+    }
+
+    .wrapper .left .first .text,
+    .wrapper .left .second .text, 
+    .wrapper .left .third .text,
+    .wrapper .left .fourth .text,
+    .wrapper .left .fifth .text {
+        font-size: 60%;
+    }
+
+    .slider .controls {
+        transform: translate(12em, 20em);
+    } 
+
+    .intro-sec h1{
+        font-size: 3em;
+    }
 }
