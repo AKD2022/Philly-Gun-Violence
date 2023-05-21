@@ -1,62 +1,178 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 * {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; padding: 0;
     box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection {
+    color: black;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #0f173a;
+    background: black;
+    animation: transitionIn 2s;
+    flex-direction: column;
 }
 
-.logo {
-    height: 100;
-    width: auto;
+/* Hamburger menu start */
+.menu-wrap{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
 }
 
-li, a, button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
+.toggler{
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	width: 60px;
+	height: 60px;
+	z-index: 3;
+	opacity: 0;
+	cursor: pointer;
 }
 
-header {
+.hamburger{
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	width: 60px;
+	height: 60px;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.hamburger>div{
+	position: absolute;
+	width: 60%;
+	height: 3px;
+	border-radius: 1.5px;
+	background-color: white;
+	transition: .4s;
+}
+
+.hamburger>div:before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	border-radius: 1.5px;
+	background-color: white;
+	top: -10px;
+	left: 0;
+	transition: .4s;
+}
+
+.hamburger>div:after{
+	content: '';
+	width: 100%;
+	height: 3px;
+	border-radius: 1.5px;
+	background-color: white;
+	top: 10px;
+	left: 0;
+	transition: .4s;
+}
+
+.toggler:checked + .hamburger>div{
+	transform: rotate(135deg);
+}
+
+.toggler:checked:hover + .hamburger>div{
+	transform: rotate(225deg);
+}
+
+.toggler:checked + .hamburger>div:before, .toggler:checked + .hamburger>div:after{
+	top: 0;
+	transform: rotate(90deg);
+}
+
+.menu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	transition: .6s;
+}
+
+.menu > div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-150%);
+    width: 1600px;
+    height: 1600px;
+    background-color: black;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 30px 10%;
+    text-align: center;
+    transition: .6s;
+    font-size: 25px;
 }
 
-.logo {
-    cursor: pointer;
+.menu > div > div{
+	max-width: 90vw;
+	max-height: 100vh;
+	opacity: 0;
+	transition: .6s;
 }
 
-.nav_links {
-    list-style: none;
+.menu > div > div > ul > li{
+	list-style: none;
 }
 
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
+.menu > div > div > ul > li > a{
+	text-decoration: none;
+	color: white;
+	font-weight: 550;
+	text-transform: uppercase;
+	margin: .75rem;
+	transition: .3s;
+	font-size: 30px;
+	display: inline-block;
+    background: black;
+    padding: 10px;
 }
 
-.nav_links li a {
-    transition: all 0.3s ease 0s;
+.menu > div > div > ul > li > a:hover{
+    background-color: black;
+    color: gray;
 }
 
-.nav_links li a:hover{
-    color:#0088a9;
+.toggler:checked ~ .menu{
+	visibility: visible;
 }
 
-button {
-    padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+.toggler:checked ~ .menu > div{
+	transform: translateX(-50%) translateY(-50%);
 }
 
-button:hover {
-    background-color: rgba(0,136,169,0.8);
+.toggler:checked ~ .menu > div > div{
+	opacity: 1;
 }
+
+/* Hamburger Menu End */
