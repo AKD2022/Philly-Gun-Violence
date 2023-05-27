@@ -1,14 +1,20 @@
-var map = L.map('map').setView([39.985049, -75.137209], 11)
+var map = L.map('map').setView([39.985049, -75.137209], 11);
+
+var bounds = L.latLngBounds([[40.085436, -75.286956], [39.850730, -75.261550], [39.978227, -75.045585], [40.164526, -74.950909]]);
+map.setMaxBounds(bounds);
+map.on('drag', function() {
+   map.panInsideBounds(bounds, { animate: false });
+});
+
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 16,
+    maxBounds: bounds,
+    maxZoom: 12,
     minZoom: 11, 
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-var marker = L.marker([39.95, -75.1667]).addTo(map);
-
 var circle = L.circle([40.0145, -75.1311], {
-    color: 'red',
+    color: 'blue',
     fillColor: '#f03',
     fillOpacity: 0.5,
     radius: 5000
