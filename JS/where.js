@@ -1,3 +1,4 @@
+
 var map = L.map('map').setView([39.985049, -75.137209], 11);
 
 var bounds = L.latLngBounds([[40.085436, -75.286956], [39.850730, -75.261550], [39.978227, -75.045585], [40.164526, -74.950909]]);
@@ -15,7 +16,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 var circle = L.circle([40.0145, -75.1311], {
     color: 'blue',
-    fillColor: '#f03',
+    fillColor: 'blue',
     fillOpacity: 0.5,
     radius: 5000
 }).addTo(map);
@@ -45,6 +46,5 @@ var polygon = L.polygon([
     [40.137950, -75.015044],
     [40.137976, -75.015294]
 ]).addTo(map);
-
 
 

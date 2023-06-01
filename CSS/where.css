@@ -179,11 +179,12 @@ body {
 
 /* Home */
 #map {
-	height: 50em; width: 50em;
-    z-index: 0;
+	height: 50em; width: 75em;
+    z-index: 1;
+	margin-top: 10px;
 	justify-content: center;
 	align-items: center;
-	display: none;
+	border-radius: 10px;
 }
 
 body::before {
@@ -204,6 +205,7 @@ body::after {
 	height: 100%;
 	background: linear-gradient(#2196f3, #e91e63);
 	clip-path: circle(20% at 10% 10%);
+	
 }
 
 .container {
@@ -213,7 +215,7 @@ body::after {
 	align-items: center;
 	max-width: 1200px;
 	flex-wrap: wrap;
-	z-index: 1;
+	z-index: 0;
 }
 
 .container .card {
@@ -249,12 +251,25 @@ body::after {
 .container .card .content h2 {
 	position: absolute;
 	top: -60px;
-	right: 30px;
-	font-size: 8em;
+	font-size: 6em;
 	color: rgba(255, 255, 255, 0.05);
 	pointer-events: none;
 }
 
+.container .card .content #south{
+	right: 1.5px;
+	font-size: 5.5em;
+}
+
+.container .card .content #north {
+	right: 4px;
+	font-size: 5.5em;
+}
+
+.container .card .content #west {
+	right: 15px;
+	font-size: 6em;
+}
 .container .card .content h3 {
 	font-size: 1.8em;
 	color: #fff;
@@ -267,15 +282,73 @@ body::after {
 	font-weight: 300;
 }
 
-.container .card .content a {
-	position: relative;
-	display: inline-block;
-	padding: 8px 20px;
-	margin-top: 15px;
-	background-color: #fff;
-	color: #000;
-	border-radius: 20px;
-	text-decoration: none;
-	font-weight: 500;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+.wrap-collabsible {
+  margin-bottom: 1.2rem 0;
 }
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+  color: #A77B0E;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+  margin-top: 5px;
+}
+
+.lbl-toggle:hover {
+  	color: #7C5A0B;
+}
+
+.lbl-toggle::before {
+	content: ' ';
+	display: inline-block;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid currentColor;
+	vertical-align: middle;
+	margin-right: .7rem;
+	transform: translateY(-2px);
+	transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  	transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+	max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	padding: .5rem 1rem;
+}
+
+
+
+
+
+
+
