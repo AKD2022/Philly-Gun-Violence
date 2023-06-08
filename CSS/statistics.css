@@ -402,15 +402,17 @@ body {
     width: 100%;
     object-fit: cover;
 }
-  
-.intro-sec h1 {
+
+.intro h1 {
+    position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 80px;
     color: white;
-}
+  }
   
-.intro-sec, .intro-sec2 {
+.intro, .intro-sec {
     height: 100vh;
     color: black;
 }
@@ -420,9 +422,10 @@ body {
     text-align: center;
     font-size: 80px;
     color: white;
+    display: flex;
 }
 
-.intro-sec2 h2 {
+.intro-sec h2 {
     color: white;
     text-align: left;
     align-items: left;
@@ -435,7 +438,7 @@ body {
     text-align: center;
 }
 
-.intro-sec2 div{
+.intro-sec div{
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -445,7 +448,7 @@ body {
     padding: 5px;
 }
 
-.intro-sec2 h2{
+.intro-sec h2{
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -465,7 +468,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     flex-direction: column;
     background-color: #111;
@@ -635,7 +638,7 @@ body {
         transform: translate(12em, 20em);
     } 
 
-    .intro-sec h1{
+    .intro h1{
         font-size: 3em;
     }
 }

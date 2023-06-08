@@ -190,11 +190,15 @@ body {
     animation-delay: 6s;
 }
 
+.container.bg_already_splashed {
+    animation-delay: none;
+}
+
 @keyframes animate {
-    0%, 20%, 100% {
+    0%, 100% {
         background-image: url(../images/statistics-home-1.jpeg);
     }
-    30% {
+    20% {
         background-image: url(../images/statistics-home-2.jpeg);
     }
     40%{
@@ -235,7 +239,7 @@ body {
     font-size: 3em;
     color: white;
     animation: fade-in ease-in 1s;
-    animation-delay: 6.1s;
+    animation-delay: 6s;
 }
 
 @keyframes fade-in {
@@ -270,7 +274,7 @@ body {
     margin-top: 1rem;
     margin-bottom: 10px;
     animation: fade-in-after-p 3s ease-in;
-    animation-delay: 6.1s;
+    animation-delay: 6s;
 }
 
 .btn::before{
@@ -300,6 +304,21 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+.btn.fade-in-already {
+    animation: none;
+    animation-delay: none;
+}
+
+.details h1.fade-in-already2 {
+    animation: none;
+    animation-delay: none;
+}
+
+p.fade-in-already3 {
+    animation: none;
+    animation-delay: none;
 }
 
 /* Intro */
