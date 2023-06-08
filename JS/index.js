@@ -10,8 +10,7 @@ var firstContainer = document.querySelector(".splash");
 var already_splashed = document.querySelector(".btn");
 var already_splashed2 = document.querySelector(".details h1");
 var already_splashed3 = document.querySelector(".details p");
-var bg_already_splashed = document.querySelector(".container")
-
+var bg_already_splashed = document.querySelector(".container");
 var result = sessionStorage.getItem('hasRan');
 
 if (!result) {
@@ -20,8 +19,8 @@ if (!result) {
     firstContainer.classList.remove("animated");
     firstContainer.classList.add("post_animated");
     already_splashed.classList.add("fade-in-already");
-    already_splashed2.classList.add("fade-in-already2");
-    already_splashed3.classList.add("fade-in-already3");
+    already_splashed2.classList.add("h1-fade-in-already");
+    already_splashed3.classList.add("p-fade-in-already");
     bg_already_splashed.classList.add("bg_already_splashed");
 }
 

@@ -306,20 +306,22 @@ body {
     }
 }
 
+
 .btn.fade-in-already {
     animation: none;
     animation-delay: none;
 }
 
-.details h1.fade-in-already2 {
+.details h1.h1-fade-in-already {
     animation: none;
     animation-delay: none;
 }
 
-p.fade-in-already3 {
+p.p-fade-in-already {
     animation: none;
     animation-delay: none;
 }
+
 
 /* Intro */
 .splash {
