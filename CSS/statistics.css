@@ -27,7 +27,6 @@ body {
     margin: 0;
     padding: 0;
     background: black;
-    animation: transitionIn 2s;
     flex-direction: column;
 }
 
@@ -368,18 +367,6 @@ body {
     transform: translate(5px, 1px);
     margin-left: 10px;
     color: white;
-}
-
-@keyframes transitionIn {
-    from {
-        opacity: 0;
-        transform: rotateX(-10deg);
-    }
-
-    to {
-        opacity: 1;
-        transform: rotateX(0);
-    }
 }
 
 .information h6 {
