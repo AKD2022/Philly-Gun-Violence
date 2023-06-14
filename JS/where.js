@@ -1,4 +1,3 @@
-
 var map = L.map('map').setView([39.985049, -75.137209], 11);
 
 var bounds = L.latLngBounds([[40.085436, -75.286956], [39.850730, -75.261550], [39.978227, -75.045585], [40.164526, -74.950909]]);
@@ -47,4 +46,13 @@ var polygon = L.polygon([
     [40.137976, -75.015294]
 ]).addTo(map);
 
+
+
+var map2 = L.map('map2').setView([39.985049, -75.137209], 11);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 12,
+    minZoom: 11, 
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map2);
 

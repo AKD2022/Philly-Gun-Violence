@@ -26,7 +26,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: #161623;
+	background:black;
     animation: transitionIn 2s;
 }
 
@@ -177,6 +177,16 @@ body {
 
 /* Hamburger Menu End */
 
+/* Scroll Starts */
+
+.scroll {
+	color: white;
+	font-size: 4em;
+	padding: 2em;
+}
+
+/* Scroll Ends */
+
 /* Home */
 #map {
 	height: 50em; width: 75em;
@@ -185,26 +195,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
-}
-
-body::before {
-	content: ' ';
-	position: absolute;
-	top: 0; left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(#f00, #f0f);
-	clip-path: circle(30% at right 70%);
-}
-
-body::after {
-	content: ' ';
-	position: absolute;
-	top: 0; left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(#2196f3, #e91e63);
-	clip-path: circle(20% at 10% 10%);
 }
 
 .container {
@@ -281,6 +271,45 @@ body::after {
 	font-weight: 300;
 }
 
+.click_on {
+	color: white;
+	padding: 20px;
+	display: none;
+}
+
+/* Home Ends */
+
+/* Home Two Starts */
+.dive {
+	font-size: 10em;
+	color: white;
+	padding: 2.5em;
+}
+
+#map2 {
+	height: 30em; width: 50em;
+    z-index: 1;
+	position: center;
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 20px;
+	display: flex;
+}
+
+.dive-north {
+	color: white;
+	font-size: larger;
+}
+
+.north {
+	font-size: 3em;
+}
+
+.north-bp {
+	float: right;
+	padding-top: 30px;
+}
+/* Home Two Ends */
 
 
 
