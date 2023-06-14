@@ -62,7 +62,7 @@ const observer3 = new IntersectionObserver((entries3) => {
 const hiddenElements3 = document.querySelectorAll('h6');
 hiddenElements3.forEach((el) => observer3.observe(el));
 
-/* video */
+/* Buttons */
 const observer4 = new IntersectionObserver((entries4) => {
     entries4.forEach((entry4) => {
         console.log(entry4)
@@ -72,8 +72,8 @@ const observer4 = new IntersectionObserver((entries4) => {
     });
 });
 
-const hiddenElements4 = document.querySelectorAll('video');
-hiddenElements4.forEach((el) => observer4.observe(el));
+const hiddenElements4 = document.querySelectorAll('.slider .controls');
+hiddenElements4.forEach((el) => observer2.observe(el));
 
 
 
