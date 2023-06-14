@@ -56,3 +56,21 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map2);
 
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-order-show');
+        } else {
+            entry.target.classList.remove('scroll-order-show')
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.scroll-order');
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+

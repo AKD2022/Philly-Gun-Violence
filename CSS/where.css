@@ -179,15 +179,36 @@ body {
 
 /* Scroll Starts */
 
+.spacer {
+	font-size: 7em;
+}
 .scroll {
-	color: white;
 	font-size: 4em;
 	padding: 2em;
 }
 
+.scroll-order {
+	opacity: 0;
+}
+
+.scroll-order-show {
+	opacity: 1;
+	color: white;
+	transition: ease-in 0.75s;
+}
+
+#last-spacer {
+	font-size: 4em;
+}
 /* Scroll Ends */
 
 /* Home */
+#note {
+	color: white;
+	padding: 10px;
+	font-size: 2em;
+}
+
 #map {
 	height: 50em; width: 75em;
     z-index: 1;
