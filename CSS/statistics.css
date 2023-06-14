@@ -637,7 +637,7 @@ body {
     }
 }
 
-@media (max-width: 388px) {
+@media (max-width: 395px) {
     .slider .controls {
         transform: translate(15em, 20em);
     }
@@ -668,7 +668,7 @@ body {
     } 
 }
 
-@media (max-width: 352px) {
+@media (max-width: 360px) {
     .wrapper .left .first .text,
     .wrapper .left .second .text, 
     .wrapper .left .third .text,
