@@ -1,24 +1,18 @@
-var map = L.map('map').setView([39.9526, 75.1652], 11);
-
-var bounds = L.latLngBounds([[40.085436, -75.286956], [39.850730, -75.261550], [39.978227, -75.045585], [40.164526, -74.950909]]);
-map.setMaxBounds(bounds);
-map.on('drag', function() {
-   map.panInsideBounds(bounds, { animate: false });
-});
+var generalView = L.map('map').setView([39.985049, -75.137209], 11);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxBounds: bounds,
     maxZoom: 12,
     minZoom: 11, 
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+}).addTo(generalView);
 
-var circle = L.circle([40.0145, -75.1311], {
-    color: 'blue',
-    fillColor: 'blue',
-    fillOpacity: 0.5,
-    radius: 5000
-}).addTo(map);
+var bounds = L.latLngBounds([[40.085436, -75.286956], [39.850730, -75.261550], [39.978227, -75.045585], [40.164526, -74.950909]]);
+generalView.setMaxBounds(bounds);
+generalView.on('drag', function() {
+   map.panInsideBounds(bounds, { animate: false });
+});
+
+
 
 var polygon = L.polygon([
     [40.132628, -74.993758],
@@ -44,7 +38,7 @@ var polygon = L.polygon([
     [40.071776, -75.096754],
     [40.137950, -75.015044],
     [40.137976, -75.015294]
-]).addTo(map);
+]).addTo(generalView);
 
 
 
@@ -58,13 +52,21 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 
-var sn = L.map('map3').setView([39.985049, -75.137209], 11);
+var ds = L.map('map3').setView([39.985049, -75.137209], 11);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 12,
     minZoom: 11, 
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(sn);
+}).addTo(ds);
+
+var dw = L.map('map4').setView([39.985049, -75.137209], 11);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 12,
+    minZoom: 11, 
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(dw);
 
 /* Lets Dive Deeper */
 const observer2 = new IntersectionObserver((entries2) => {

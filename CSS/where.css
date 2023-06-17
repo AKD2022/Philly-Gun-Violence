@@ -321,6 +321,11 @@ body {
 /* Home Ends */
 
 /* Home Two Starts */
+.spacer {
+	font-size: 10em;
+	opacity: 0;
+}
+
 .left {
 	opacity: 0;
 }
@@ -345,7 +350,7 @@ body {
 	padding: 2.5em;
 }
 
-#map2, #map3 {
+#map2, #map3, #map4 {
 	height: 30em; width: 50em;
     z-index: 1;
 	margin-top: 20px;
@@ -354,41 +359,27 @@ body {
 	display: flex;
 }
 
-.north, .south {
+.north, .south, .west {
 	text-align: center;
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
 }
-.dive-north {
+.dive-north, .dive-south, .dive-west {
 	color: white;
 	padding: 20px;
 	font-size: 20px;
 }
 
-.north {
+.north, .south, .west {
 	font-size: 3em;
 }
 
-.north-bp {
+.north-bp, .south-bp, .west-bp {
 	float: right;
 	padding-top: 30px;
 }
 
-.dive-south {
-	color: white;
-	padding: 20px;
-	font-size: 20px;
-}
-
-.south {
-	font-size: 3em;
-}
-
-.south-bp {
-	float: right;
-	padding-top: 30px;
-}
 /* Home Two Ends */
 
 
