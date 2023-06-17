@@ -37,27 +37,59 @@
 </div>
 <!--Navbar End-->
 
+<!--Splash Starts-->
+
+    <section class="section one">
+        <div class="container1">
+          <div class="column-left">
+            <p class="text"> First, we need to get a general look at Philly.</p>
+            <p class="text">↓</p>
+          </div>
+        </div>
+      </section>
+      <section class="section one">
+        <div class="container1">
+          <div class="column-left">
+            <p class="text">
+                Next, we can split Philly into sections.
+            </p>
+            <p class="text">↓</p>
+          </div>
+        </div>
+      </section>
+      <section class="section one">
+        <div class="container1">
+          <div class="column-left">
+            <p class="text">Then, we can dive deeper</p>
+            <p class="text">↓</p>
+          </div>
+        </div>
+      </section>
+      <section class="section one">
+        <div class="container1">
+          <div class="column-left">
+            <p class="text">Get more data about each section</p>
+            <p class="text">↓</p>
+          </div>
+        </div>
+      </section>
+      <section class="section one">
+        <div class="container1">
+          <div class="column-left">
+            <p class="text">And get the real perspectives of "dangerous" or "safe"</p>
+            <p class="text">↓</p>
+          </div>
+        </div>
+      </section>
+      <section class="section one"></section>
+<!--Splash Ends-->
+
 <!--Home Page Start-->
-<!--General Perspective Start-->
-<div class="scroll">
-        <h2 class="scroll-order">First, we need to get a general look at Philly</h2>
-        <div class="spacer">LLL</div>
-        <h2 class="scroll-order">Next, we can split Philly into sections.</h2>
-        <div class="spacer">LLL</div>
-        <h2 class="scroll-order">Then, we can dive deeper</h2>
-        <div class="spacer">LLL</div>
-        <h2 class="scroll-order">Get more data about each section</h2>
-        <div class="spacer">LLL</div>
-        <h2 class="scroll-order">And get the real perspectives of "dangerous" or "safe"</h2>
-        <div id="last-spacer">LLL</div>
-</div>
-<!--General Perspective End-->
-
-<h1 id="note">General Perspective</h1>
-<section class="map">
+<h1 id="note">General Perspective: </h1>
+<div class="map">
         <div id="map"></div>
-</section>
-
+</div>
+<h2 id="hover-over">Hover over each card to learn more about each area</h2>
  <div class="container">
      <div class="card">
         <div class="content">
@@ -93,7 +125,7 @@
 
 <!--Dive Deeper-->
 <section>
-    <h1 class="dive"><span id="lets">Lets </span><span id="dive">Dive </span><span id="deeper">Deeper</span></h1>
+    <h1 class="dive-full"><span class="left">Lets </span><span class="right">Dive </span><span class="left">Deeper</span></h1>
 </section>
 <!--Dive Deeper End-->
 
@@ -112,10 +144,27 @@
         <div id="map2"></div>
     </div>
 </section>
+
+<section class="dive-south">
+    <div class="container-sn">
+        <h1 class="south">South Philly</h1>
+        <div class="content-ds">Lets diver deeper into North Philly, which is the #1 Kill Area in Philadelphia.</div>
+        <p>North Philly is home to many dangerous neighborhoods like Frankford, Fairhill, and Strawberry Mansion.</p>
+        <ul class="south-bp">
+            <li>Red Spots indicate deadly areas to live</li>
+            <li>Yellow Spots indicate ok areas to live</li>
+            <li>Green Spots indicate safe places to live</li>
+        </ul>
+        <div id="map3"></div>
+    </div>
+</section>
 <!--Next Home Ends-->
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js"></script>
 <script src="JS/where.js"></script>
-<script>
-    </script>
+<script src="JS/scroll-trigger.js"></script>
 </body>
 </html>

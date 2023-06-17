@@ -34,3 +34,13 @@ git reset --soft HEAD^
 .btn:hover{
     color: #fff;
 }
+
+
+
+<div class="splash">
+        <h2 class="splash-item">First, we need to get a general look at Philly</h2>
+        <h2 class="splash-item">Next, we can split Philly into sections.</h2>
+        <h2 class="splash-item">Then, we can dive deeper</h2>
+        <h2 class="splash-item">Get more data about each section</h2>
+        <h2 class="splash-item">And get the real perspectives of "dangerous" or "safe"</h2>
+</div>

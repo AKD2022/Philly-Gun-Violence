@@ -1,4 +1,4 @@
-var map = L.map('map').setView([39.985049, -75.137209], 11);
+var map = L.map('map').setView([39.9526, 75.1652], 11);
 
 var bounds = L.latLngBounds([[40.085436, -75.286956], [39.850730, -75.261550], [39.978227, -75.045585], [40.164526, -74.950909]]);
 map.setMaxBounds(bounds);
@@ -48,28 +48,53 @@ var polygon = L.polygon([
 
 
 
-var map2 = L.map('map2').setView([39.985049, -75.137209], 11);
+var dn = L.map('map2').setView([39.985049, -75.137209], 11);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 12,
     minZoom: 11, 
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map2);
+}).addTo(dn);
 
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting) {
-            entry.target.classList.add('scroll-order-show');
+
+var sn = L.map('map3').setView([39.985049, -75.137209], 11);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 12,
+    minZoom: 11, 
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(sn);
+
+/* Lets Dive Deeper */
+const observer2 = new IntersectionObserver((entries2) => {
+    entries2.forEach((entry2) => {
+        console.log(entry2)
+        if (entry2.isIntersecting) {
+            entry2.target.classList.add('left-transition');
         } else {
-            entry.target.classList.remove('scroll-order-show')
+            entry2.target.classList.remove('left-transition');
         }
     });
 });
 
-const hiddenElements = document.querySelectorAll('.scroll-order');
-hiddenElements.forEach((el) => observer.observe(el));
+const hiddenElements2 = document.querySelectorAll('.left');
+hiddenElements2.forEach((el) => observer2.observe(el));
+
+
+const observer3 = new IntersectionObserver((entries3) => {
+    entries3.forEach((entry3) => {
+        console.log(entry3)
+        if (entry3.isIntersecting) {
+            entry3.target.classList.add('right-transition');
+        } else {
+            entry3.target.classList.remove('right-transition');
+        }
+    });
+});
+
+const hiddenElements3 = document.querySelectorAll('.right');
+hiddenElements3.forEach((el) => observer3.observe(el));
 
 
 
