@@ -1,4 +1,5 @@
-var generalView = L.map('map').setView([39.985049, -75.137209], 11);
+/* Map */
+var generalView = L.map('gp-map').setView([39.985049, -75.137209], 11);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 12,
@@ -41,63 +42,14 @@ var polygon = L.polygon([
 ]).addTo(generalView);
 
 
-
-var dn = L.map('map2').setView([39.985049, -75.137209], 11);
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 12,
-    minZoom: 11, 
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(dn);
-
-
-
-var ds = L.map('map3').setView([39.985049, -75.137209], 11);
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 12,
-    minZoom: 11, 
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(ds);
-
-var dw = L.map('map4').setView([39.985049, -75.137209], 11);
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 12,
-    minZoom: 11, 
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(dw);
-
-/* Lets Dive Deeper */
-const observer2 = new IntersectionObserver((entries2) => {
-    entries2.forEach((entry2) => {
-        console.log(entry2)
-        if (entry2.isIntersecting) {
-            entry2.target.classList.add('left-transition');
-        } else {
-            entry2.target.classList.remove('left-transition');
+const observer1 = new IntersectionObserver((entries1) => {
+    entries1.forEach((entry1) => {
+        console.log(entry1)
+        if (entry1.isIntersecting) {
+            entry1.target.classList.add('fade-in-delay');
         }
     });
 });
 
-const hiddenElements2 = document.querySelectorAll('.left');
-hiddenElements2.forEach((el) => observer2.observe(el));
-
-
-const observer3 = new IntersectionObserver((entries3) => {
-    entries3.forEach((entry3) => {
-        console.log(entry3)
-        if (entry3.isIntersecting) {
-            entry3.target.classList.add('right-transition');
-        } else {
-            entry3.target.classList.remove('right-transition');
-        }
-    });
-});
-
-const hiddenElements3 = document.querySelectorAll('.right');
-hiddenElements3.forEach((el) => observer3.observe(el));
-
-
-
-
+const hiddenElements1 = document.querySelectorAll('.gonorth-content');
+hiddenElements1.forEach((el) => observer1.observe(el));

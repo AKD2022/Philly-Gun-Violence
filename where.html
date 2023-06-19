@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/where.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js"></script>
+
+    <link rel="stylesheet" href="CSS/where.css">
     <link rel="icon" href="images/Website-logo.png">
     <title>Where it happens</title>
 </head>
@@ -36,58 +40,56 @@
     </div>
 </div>
 <!--Navbar End-->
-
 <!--Splash Starts-->
-    <section class="section one">
-        <div class="container1">
-          <div class="column-left">
-            <p class="text"> First, we need to get a general look at Philly.</p>
-            <p class="text">↓</p>
-          </div>
-        </div>
-      </section>
-      <section class="section one">
-        <div class="container1">
-          <div class="column-left">
-            <p class="text">
-                Next, we can split Philly into sections.
-            </p>
-            <p class="text">↓</p>
-          </div>
-        </div>
-      </section>
-      <section class="section one">
-        <div class="container1">
-          <div class="column-left">
-            <p class="text">Then, we can dive deeper</p>
-            <p class="text">↓</p>
-          </div>
-        </div>
-      </section>
-      <section class="section one">
-        <div class="container1">
-          <div class="column-left">
-            <p class="text">Get more data about each section</p>
-            <p class="text">↓</p>
-          </div>
-        </div>
-      </section>
-      <section class="section one">
-        <div class="container1">
-          <div class="column-left">
-            <p class="text">And get the real perspectives of "dangerous" or "safe"</p>
-            <p class="text">↓</p>
-          </div>
-        </div>
-      </section>
-      <section class="section one"></section>
+<section class="section one">
+    <div class="container1">
+      <div class="column-left">
+        <p class="text"> First, we need to get a general look at Philly.</p>
+        <p class="text">↓</p>
+      </div>
+    </div>
+  </section>
+  <section class="section one">
+    <div class="container1">
+      <div class="column-left">
+        <p class="text">
+            Next, we can split Philly into sections.
+        </p>
+        <p class="text">↓</p>
+      </div>
+    </div>
+  </section>
+  <section class="section one">
+    <div class="container1">
+      <div class="column-left">
+        <p class="text">Then, we can dive deeper</p>
+        <p class="text">↓</p>
+      </div>
+    </div>
+  </section>
+  <section class="section one">
+    <div class="container1">
+      <div class="column-left">
+        <p class="text">Get more data about each section</p>
+        <p class="text">↓</p>
+      </div>
+    </div>
+  </section>
+  <section class="section one">
+    <div class="container1">
+      <div class="column-left">
+        <p class="text">And get the real perspectives of "dangerous" or "safe"</p>
+        <p class="text">↓</p>
+      </div>
+    </div>
+  </section>
+  <section class="section one"></section>
 <!--Splash Ends-->
+
 
 <!--Home Page Start-->
 <h1 id="note">General Perspective: </h1>
-<div class="map">
-        <div id="map"></div>
-</div>
+<div id="gp-map"></div>
 <h2 id="hover-over">Hover over each card to learn more about each area</h2>
  <div class="container">
      <div class="card">
@@ -121,65 +123,20 @@
     </div>
 <!--Home Page End-->
 
-
-<!--Dive Deeper-->
-<section>
-    <h1 class="dive-full"><span class="left">Lets </span><span class="right">Dive </span><span class="left">Deeper</span></h1>
-</section>
-<!--Dive Deeper End-->
-
-
-<!--Next Home Starts-->
-<section class="dive-north">
-    <div class="container-dn">
-        <h1 class="north">North Philly</h1>
-        <div class="content-dn">Lets dive deeper into North Philly, which is the #1 Kill Area in Philadelphia.</div>
-        <p>North Philly is home to many dangerous neighborhoods like Frankford, Fairhill, and Strawberry Mansion.</p>
-        <ul class="north-bp">
-            <li>Red Spots indicate deadly areas to live</li>
-            <li>Yellow Spots indicate ok areas to live</li>
-            <li>Green Spots indicate safe places to live</li>
-        </ul>
-        <div id="map2"></div>
-    </div>
-</section>
-                                    <div class="spacer">---------</div>
-<section class="dive-south">
-    <div class="container-sn">
-        <h1 class="south">South Philly</h1>
-        <div class="content-ds">Lets dive deeper into North Philly, which is the #1 Kill Area in Philadelphia.</div>
-        <p>North Philly is home to many dangerous neighborhoods like Frankford, Fairhill, and Strawberry Mansion.</p>
-        <ul class="south-bp">
-            <li>Red Spots indicate deadly areas to live</li>
-            <li>Yellow Spots indicate ok areas to live</li>
-            <li>Green Spots indicate safe places to live</li>
-        </ul>
-        <div id="map3"></div>
-    </div>
-</section>
-                                    <div class="spacer">---------</div>
-<section class="dive-west">
-    <div class="container-dw">
-        <h1 class="west">West Philly</h1>
-        <div class="content-dw">Lets dive deeper into North Philly, which is the #1 Kill Area in Philadelphia.</div>
-        <p>North Philly is home to many dangerous neighborhoods like Frankford, Fairhill, and Strawberry Mansion.</p>
-        <ul class="west-bp">
-            <li>Red Spots indicate deadly areas to live</li>
-            <li>Yellow Spots indicate ok areas to live</li>
-            <li>Green Spots indicate safe places to live</li>
-        </ul>
-        <div id="map4"></div>
-    </div>
-</section>    
-<!--Next Home Ends-->
-
 <!--Transitions To Next-->
+<section class="gonorth">
+    <div class="gonorth-content">
+        <h3>Now that we have a general view of the city of Philadelphia, we need to dive deeper into the 3 main parts of Philly:
+            North, South, and West. To start, we will go to North Philly, and learn where the most dangerous areas are, and where 
+            the least dangerous areas are. 
+        </h3>
+        <a href="Dive-Areas/dive-north.html" class="btn">Lets Learn!</a>
+    </div>
+</section>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js"></script>
 <script src="JS/where.js"></script>
 <script src="JS/scroll-trigger.js"></script>
+
 </body>
 </html>

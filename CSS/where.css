@@ -224,12 +224,10 @@ body {
 	font-size: 2em;
 }
 
-#map {
+#gp-map {
 	height: 50em; width: 75em;
     z-index: 1;
 	margin-top: 10px;
-	justify-content: center;
-	align-items: center;
 	border-radius: 10px;
 }
 
@@ -320,67 +318,61 @@ body {
 
 /* Home Ends */
 
-/* Home Two Starts */
-.spacer {
-	font-size: 10em;
-	opacity: 0;
-}
-
-.left {
-	opacity: 0;
-}
-
-.right {
-	opacity: 0;
-}
-
-.left-transition {
-	opacity: 1;
-	transition: 1s ease-in;
-}
-
-.right-transition {
-	opacity: 1;
-	transition: 1s ease-in;
-}
-
-.dive-full {
-	font-size: 10em;
+/* Go North */
+.gonorth {
 	color: white;
-	padding: 2.5em;
+	padding: 50px;
 }
 
-#map2, #map3, #map4 {
-	height: 30em; width: 50em;
-    z-index: 1;
-	margin-top: 20px;
-	padding: 20px;
-	border-radius: 20px;
-	display: flex;
-}
-
-.north, .south, .west {
+.gonorth-content {
+	font-size: 20px;
+	padding-left: 2em;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
-	padding: 20px;
-}
-.dive-north, .dive-south, .dive-west {
-	color: white;
-	padding: 20px;
-	font-size: 20px;
+	opacity: 0;
 }
 
-.north, .south, .west {
-	font-size: 3em;
+.fade-in-delay {
+	opacity: 1;
+	transition: 1s ease-in;
+	transition-delay: 10s;
 }
 
-.north-bp, .south-bp, .west-bp {
-	float: right;
-	padding-top: 30px;
+.btn {
+    display: inline-block;
+    padding: .8rem 3rem;
+    border: .2rem solid gray;
+    color: gray;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 3rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
 }
 
-/* Home Two Ends */
+.btn::before{
+    content: ' ';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0%;
+    height: 100%;
+    background: gray;
+    transition: .3s linear;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.btn:hover{
+    color: #fff;
+}
+
 
 
 
