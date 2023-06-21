@@ -175,6 +175,46 @@ body {
 	opacity: 1;
 }
 
+/* Dropdown */
+.dropdown .dropbtn {
+	font-size: 30px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit; 
+	margin: 0; 
+}
+  
+.navbar a:hover, .dropdown:hover .dropbtn {
+	color: gray;
+}
+  
+.dropdown-content {
+	display: none;
+	position: center;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+  
+.dropdown-content a {
+	float: center;
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-content a:hover {
+	color: gray;
+  }
+
 /* Hamburger Menu End */
 
 /* Splash Starts */
