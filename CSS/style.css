@@ -134,7 +134,7 @@ body {
     font-size: 25px;
 }
 
-.menu > div > div{
+.menu > div > div { 
 	max-width: 90vw;
 	max-height: 100vh;
 	opacity: 0;
@@ -173,6 +173,53 @@ body {
 
 .toggler:checked ~ .menu > div > div{
 	opacity: 1;
+}
+
+.hover {
+	display: none;
+	position: center;
+	min-width: 160px;
+}
+
+
+/* Dropdown */
+.dropdown .dropbtn {
+	font-size: 30px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 10px;
+	background-color: inherit;
+	font-family: inherit; 
+	margin: 0; 
+}
+  
+.dropdown:hover {
+	transition: 1s ease-in;
+}
+ 
+.dropdown-content {
+	display: none;
+	position: center;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+  
+.dropdown-content a {
+	float: center;
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-content a:hover {
+	color: gray;
 }
 
 /* Hamburger Menu End */
