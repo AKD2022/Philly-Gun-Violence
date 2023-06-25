@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection {
+    color: black;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: black;
+    animation: transitionIn 2s;
+    flex-direction: column;
+}
+
+/* Hamburger menu start */
+.menu-wrap{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.toggler{
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	width: 60px;
+	height: 60px;
+	z-index: 3;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.hamburger{
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	width: 60px;
+	height: 60px;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.hamburger>div{
+	position: absolute;
+	width: 60%;
+	height: 3px;
+	border-radius: 1.5px;
+	background-color: white;
+	transition: .4s;
+}
+
+.hamburger>div:before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	border-radius: 1.5px;
+	background-color: white;
+	top: -10px;
+	left: 0;
+	transition: .4s;
+}
+
+.hamburger>div:after{
+	content: '';
+	width: 100%;
+	height: 3px;
+	border-radius: 1.5px;
+	background-color: white;
+	top: 10px;
+	left: 0;
+	transition: .4s;
+}
+
+.toggler:checked + .hamburger>div{
+	transform: rotate(135deg);
+}
+
+.toggler:checked:hover + .hamburger>div{
+	transform: rotate(225deg);
+}
+
+.toggler:checked + .hamburger>div:before, .toggler:checked + .hamburger>div:after{
+	top: 0;
+	transform: rotate(90deg);
+}
+
+.menu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	transition: .6s;
+}
+
+.menu > div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-150%);
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: .6s;
+    font-size: 25px;
+}
+
+.menu > div > div { 
+	max-width: 90vw;
+	max-height: 100vh;
+	opacity: 0;
+	transition: .6s;
+}
+
+.menu > div > div > ul > li{
+	list-style: none;
+}
+
+.menu > div > div > ul > li > a{
+	text-decoration: none;
+	color: white;
+	font-weight: 550;
+	text-transform: uppercase;
+	margin: .75rem;
+	transition: .3s;
+	font-size: 30px;
+	display: inline-block;
+    background: black;
+    padding: 10px;
+}
+
+.menu > div > div > ul > li > a:hover{
+    background-color: black;
+    color: gray;
+}
+
+.toggler:checked ~ .menu{
+	visibility: visible;
+}
+
+.toggler:checked ~ .menu > div{
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.toggler:checked ~ .menu > div > div{
+	opacity: 1;
+}
+
+.hover {
+	display: none;
+	position: center;
+	min-width: 160px;
+}
+
+
+/* Dropdown */
+.dropdown .dropbtn {
+	font-size: 30px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 10px;
+	background-color: inherit;
+	font-family: inherit; 
+	margin: 0; 
+}
+  
+.dropdown:hover {
+	transition: 1s ease-in;
+}
+ 
+.dropdown-content {
+	display: none;
+	position: center;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+  
+.dropdown-content a {
+	float: center;
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-content a:hover {
+	color: gray;
+}
+
+/* Hamburger Menu End */
+
+/* Welcome Starts */
+p {
+    color: white;
+}
+.wrapper {
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.marquee {
+	display: flex;
+	width: 1000%;
+}
+
+.square {
+	background-color: #63f78a;
+	margin-right: 30px;
+	width: 220px;
+	height: 220px;
+	border-radius: 8px;
+}
+
+p {
+	font-size: 22px;
+	font-family: sans-serif;
+	max-width: 600px;
+	margin: 120px auto;
+	line-height: 1.4;
+}
