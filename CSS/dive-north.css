@@ -257,6 +257,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 10% auto;
+	opacity: 0;
 }
 
 #backBtn, #nextBtn {
@@ -270,3 +271,26 @@ body {
     cursor: pointer;
     transform: scale(1.1);
 }
+
+.fade-in {
+	opacity: 1;
+	transition: 3s;
+	transform: translateY(-100%);
+}
+
+.notes {
+	text-transform: capitalize;
+	font-size: 2em;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	line-height: 50vh;
+	opacity: 0;
+}
+
+.fade-in-notes {
+	opacity: 1;
+	transform: translateY(20%);
+	transition: 1s;
+}
+

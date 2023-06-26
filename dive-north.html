@@ -49,30 +49,106 @@
     </div>
 </div>
 <!--Navbar End-->
-
 <!--Welcome-->
 <section class="welcome">
+    <div class="notes">North Philly can be Beautiful</div>
     <div class="gallery-wrap">
-        <img src="images/back.png" alt="backBtn" id="backBtn">
+        <img src="images/back.png" id="backBtn">
         <div class="gallery">
             <div>
-                <span><img src="north-philly-images/1075574_951239428263226_4138938958504938087_o.jpg" alt=""></span>
-                <span><img src="north-philly-images/download (1).jpeg" alt=""></span>
-                <span><img src="north-philly-images/download (2).jpeg" alt=""></span>
+                <span><img src="north-philly-images/istockphoto-1301485835-612x612.jpg"></span>
+                <span><img src="north-philly-images/halerevised.jpg"></span>
+                <span><img src="north-philly-images/download (2).jpeg"></span>
+        
             </div>
             <div>
-                <span><img src="north-philly-images/download.jpeg" alt=""></span>
-                <span><img src="north-philly-images/halerevised.jpg" alt=""></span>
-                <span><img src="north-philly-images/images.jpeg" alt=""></span>
+                <span><img src="north-philly-images/download.jpeg"></span>
+                <span><img src="north-philly-images/download (1).jpeg"></span>
+                <span><img src="north-philly-images/1075574_951239428263226_4138938958504938087_o.jpg"></span>
             </div>
         </div>
-        <img src="images/next.png" alt="nextBtn" id="nextBtn">
+        <img src="images/next.png" id="nextBtn">
     </div>
-</section>
-
+    <div class="notes">But it can also be dangerous</div>
+    <div class="gallery-wrap">
+        <img src="images/back.png" id="backBtn">
+        <div class="gallery">
+            <div>
+                <span><img src="north-philly-images/istockphoto-1301485835-612x612.jpg"></span>
+                <span><img src="north-philly-images/halerevised.jpg"></span>
+                <span><img src="north-philly-images/download (2).jpeg"></span>
+        
+            </div>
+            <div>
+                <span><img src="north-philly-images/download.jpeg"></span>
+                <span><img src="north-philly-images/download (1).jpeg"></span>
+                <span><img src="north-philly-images/1075574_951239428263226_4138938958504938087_o.jpg"></span>
+            </div>
+        </div>
+        <img src="images/next.png" id="nextBtn">
+    </div>
+</section>    
 <!--Welcome Ends-->
 
+<!--Home Page Starts-->
+<!--Home Page Ends-->
+
 <script src="JS/Maps/northmap.js"></script>
+
+<script>
+
+    let scrollContainer = document.querySelector(".gallery");
+    let backbtn = document.getElementById("backBtn");
+    let nextbtn = document.getElementById("nextBtn");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+    });
+
+    nextbtn.addEventListener("click", ()=>{
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft += 300;
+
+        
+    });
+
+    backbtn.addEventListener("click", ()=>{
+        scrollContainer.style.scrollBehavior = "smooth";
+
+        scrollContainer.scrollLeft -= 300;   
+    });
+
+    /* Fade-in Gallery */
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+        } else {
+            entry.target.classList.remove('fade-in');
+        }
+    });
+    });
+
+    const hiddenElements = document.querySelectorAll('.gallery-wrap');
+    hiddenElements.forEach((el) => observer.observe(el));
+    
+    /* Fade-in .notes */
+    const observer1 = new IntersectionObserver((entries1) => {
+    entries1.forEach((entry1) => {
+        console.log(entry1)
+        if (entry1.isIntersecting) {
+            entry1.target.classList.add('fade-in-notes');
+        } else {
+            entry1.target.classList.remove('fade-in-notes')
+        }
+    });
+    });
+
+    const hiddenElements1 = document.querySelectorAll('.notes');
+    hiddenElements1.forEach((el) => observer1.observe(el));
+    </script>
 
 </body>
 </html>
