@@ -57,18 +57,6 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.crime-scene');
 hiddenElements.forEach((el) => observer.observe(el));
 
-const observer1 = new IntersectionObserver((entries1) => {
-  entries1.forEach((entry1) => {
-      console.log(entry1)
-      if (entry1.isIntersecting) {
-          entry1.target.classList.add('animate-after');
-      }
-  });
-});
-
-const hiddenElements1 = document.querySelectorAll('.crime-scene-next');
-hiddenElements1.forEach((el) => observer1.observe(el));
-
 
 /* Map */
 var dn = L.map('dn-map').setView([39.985049, -75.137209], 11);
