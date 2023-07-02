@@ -54,4 +54,18 @@ git reset --soft HEAD^
                           <a href="dive-south.html">Deep Dive - South Philly</a>
                           <a href="dive-west.html">Deep Dive - West Philly</a>
                         </div>
-                      </div>  
+                      </div>
+
+
+
+const observer1 = new IntersectionObserver((entries1) => {
+    entries1.forEach((entry1) => {
+        console.log(entry1)
+        if (entry1.isIntersecting) {
+            entry1.target.classList.add('fade-in-delay');
+        }
+    });
+});
+
+const hiddenElements1 = document.querySelectorAll('.gonorth-content');
+hiddenElements1.forEach((el) => observer1.observe(el));

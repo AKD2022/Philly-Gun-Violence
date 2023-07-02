@@ -226,17 +226,17 @@ body {
 /* Hamburger Menu End */
 
 /* Welcome Starts */
-.intro, .after-intro {
+.intro {
 	height: 100vh;
 }
   
-.intro video, .after-intro video {
+.intro video {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
 }
   
-.intro h1, .after-intro h1 {
+.intro h1 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -256,3 +256,29 @@ section .divider {
 	font-size: 5em;
 }
 
+.next {
+	height: 100vh;
+	position: relative;
+	text-align: center;
+  	color: white;
+}
+
+.next h1 {
+	font-size: 5em;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+
+.crime-scene {
+	opacity: 0;
+	transform: translate(-100%, -100%);
+}
+
+.animate {
+	opacity: 1;
+	transition: 1s;
+	transform: translate(-1%, -1%);
+	transition-delay: 8s;
+}

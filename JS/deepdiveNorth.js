@@ -44,54 +44,30 @@ setInterval(() => {
   video.currentTime = delay;
 }, 33.3);
 
-
-/* Second Video */
-const intro_after = document.querySelector(".after-intro");
-const video_after = intro_after.querySelector(".after-intro video");
-const text_after = intro_after.querySelector(".after-intro h1");
-//END SECTION
-const section_after = document.querySelector("section");
-const end_after = section_after.querySelector(".after-intro h1");
-
-//SCROLLMAGIC
-const controller_after = new ScrollMagic.Controller();
-
-//Scenes
-let scene_after = new ScrollMagic.Scene({
-  duration: 6000,
-  triggerElement: intro_after,
-  triggerHook: 0
-})
-  .setPin(intro_after)
-  .addTo(controller_after);
-
-//Text Animation
-const textAnim_after = TweenMax.fromTo(text_after, 3, { opacity: 1 }, { opacity: 0 });
-
-let scene2_after = new ScrollMagic.Scene({
-  duration: 3000,
-  triggerElement: intro_after,
-  triggerHook: 0
-})
-  .setTween(textAnim_after)
-  .addTo(controller_after);
-
-//Video Animation
-let accelamount_after = 0.1;
-let scrollpos_after = 0;
-let delay_after = 0;
-
-scene_after.on("update", e => {
-  scrollpos_after = e.scrollPos / 1000;
+/* Crime Scene Tape */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+      }
+  });
 });
 
-setInterval(() => {
-  delay_after += (scrollpos_after - delay_after) * accelamount_after;
-  console.log(scrollpos_after, delay);
+const hiddenElements = document.querySelectorAll('.crime-scene');
+hiddenElements.forEach((el) => observer.observe(el));
 
-  video_after.currentTime = delay;
-}, 33.3);
+const observer1 = new IntersectionObserver((entries1) => {
+  entries1.forEach((entry1) => {
+      console.log(entry1)
+      if (entry1.isIntersecting) {
+          entry1.target.classList.add('animate-after');
+      }
+  });
+});
 
+const hiddenElements1 = document.querySelectorAll('.crime-scene-next');
+hiddenElements1.forEach((el) => observer1.observe(el));
 
 
 /* Map */
