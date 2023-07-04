@@ -246,12 +246,12 @@ body {
 }
   
 section {
-	height: 100vh;
+	height: 140vh;
 	color: white;
 }
   
 section .divider {
-	padding-top: 300px;
+	padding-top: 5em;
 	text-align: center;
 	font-size: 5em;
 }
@@ -280,5 +280,18 @@ section .divider {
 	opacity: 1;
 	transition: 1s;
 	transform: translate(-1%, -1%);
-	transition-delay: 8s;
+	transition-delay: 1s;
+}
+/* Welcome Ends */
+
+/* Home Page Starts */
+.home {
+	height: 100vh;
+	color: white;
+	text-align: center;
+}
+
+.look {
+	line-height: 100vh;
+	font-size: 5em;
 }
