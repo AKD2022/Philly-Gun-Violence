@@ -242,6 +242,12 @@ body {
 
 /* Intro Ends */
 
+.blank {
+	min-height: 30vh;
+	width: 100%;
+	background-color: #333; /* Set Later */
+}
+
 /* Info Starts */
 
 .wrapper {
