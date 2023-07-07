@@ -4,31 +4,26 @@
     font-family: 'Montserrat', sans-serif;
     margin: 0; padding: 0;
     box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    transition: all .2s linear;
 }
+
 
 *::selection {
     color: black;
 }
 
 html {
-    overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	font-size: 16px;
+	margin: 0;
+	background: #fff;
 	min-height: 100vh;
-	background:black;
-    animation: transitionIn 2s;
-	color: white;
+	background: #000;
+	position: relative;
+	overflow-x: hidden;
 }
 
 
@@ -181,10 +176,13 @@ body {
 	position: center;
 	min-width: 160px;
 }
+
 /* Hamburger Menu End */
 
 /* Intro Starts */
+
 .container {
+	color: white;
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
@@ -218,7 +216,6 @@ body {
 	font-size: 5em;
 	animation: animate 2s ease-in infinite;
 	opacity: 1;
-	padding: 20px;
 	transform: translateY(3em);
 }
 
@@ -243,10 +240,35 @@ body {
 	}
 }
 
+/* Intro Ends */
 
+/* Info Starts */
 
+.wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+}
 
+.section {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: space-around;
+	background-color: rgba(4, 85, 120, 0.45);
+	background-size: cover;
+	background-position: center center;
+	background-blend-mode: darken;
+}
 
+.section h2 {
+	color: #fff;
+	font-size: 100px;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
 
 
 
