@@ -311,23 +311,29 @@ body {
 	font-size: 7em;
 	padding: 20px;
 	text-shadow: red 5px 5px;
+	text-decoration: underline;
 }
 
 .section2 p {
 	font-size: 3em;
 	padding: 20px;
-	border: 5px solid white;
+	border: 5px dotted white;
 	border-radius: 3em;
-	background-blend-mode: darken;
 	text-shadow: gray 1px 1px;
+	background-blend-mode: lighten;
 }
 
-.indicator {
-	padding: 20px;
+.indicator {	
+	padding-top: 20px;
 	float: left;
 	font-size: 5em;
 	transform: translateY(-2em);
 	text-shadow: red 3px 3px;
+}
+
+#map {
+	height: 50em;
+	width: 50em;
 }
 
 
